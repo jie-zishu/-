@@ -1,0 +1,323 @@
+Using pre-set license
+Built from '2022.3/china_unity/release' branch; Version is '2022.3.20f1c1 (82a5dab7aa2a) revision 8562138'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16004 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Editor\2022.3.20f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+D:/Program Files/Unity/Editor/姣曚笟璁捐
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+51238
+Successfully changed project path to: D:/Program Files/Unity/Editor/姣曚笟璁捐
+D:/Program Files/Unity/Editor/姣曚笟璁捐
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [30536] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 1655450828 [EditorId] 1655450828 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [30536] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 1655450828 [EditorId] 1655450828 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 23.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.20f1c1 (82a5dab7aa2a)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/姣曚笟璁捐/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     5994 MB
+    Driver:   32.0.15.9579
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011341 seconds.
+- Loaded All Assemblies, in  0.340 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2105 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.420 seconds
+Domain Reload Profiling: 2756ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (118ms)
+		LoadAssemblies (125ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (104ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (2421ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2379ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2249ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (88ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.860 seconds
+Refreshing native plugins compatible for Editor in 14.52 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.348 seconds
+Domain Reload Profiling: 2200ms
+	BeginReloadAssembly (127ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (648ms)
+		LoadAssemblies (481ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (209ms)
+				TypeCache.ScanAssembly (191ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1349ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1153ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (987ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 8.74 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7028 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.2 MB). Loaded Objects now: 7483.
+Memory consumption went from 271.4 MB to 270.2 MB.
+Total: 3.731500 ms (FindLiveObjects: 0.365000 ms CreateObjectMapping: 0.214400 ms MarkObjects: 2.819600 ms  DeleteObjects: 0.331500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 356970.678668 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/FishbowlGlass.mat
+  artifactKey: Guid(b3b006f004610ff458f3a8f03f1e2cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/FishbowlGlass.mat using Guid(b3b006f004610ff458f3a8f03f1e2cc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989875a6e5a9140cf1bd833f6b93747b') in 0.234057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Models/Environment/Level_1/HandSaw/Materials/HandSaw_Basecolor.mat
+  artifactKey: Guid(b62f03415e967f74299b79158b3aaaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_1/HandSaw/Materials/HandSaw_Basecolor.mat using Guid(b62f03415e967f74299b79158b3aaaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef50cc37851e7438e0b2c85742271dda') in 0.015156 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Floors/Floor-Tiles.mat
+  artifactKey: Guid(1fa023701e27f8e4d95cd4f0aaede6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Floors/Floor-Tiles.mat using Guid(1fa023701e27f8e4d95cd4f0aaede6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0dc79163d2bbf1cde43b961c9a9536') in 0.026426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Structure_Mesh.fbx
+  artifactKey: Guid(d0a9bfb4b5f28174884e89dd76563ae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Structure_Mesh.fbx using Guid(d0a9bfb4b5f28174884e89dd76563ae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dfb633e5be894459d4d0f7f5ff1f202') in 0.068041 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.376910 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Link High.mat
+  artifactKey: Guid(411b8ced1b5cfc9418611cb1568cd1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Link High.mat using Guid(411b8ced1b5cfc9418611cb1568cd1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f6ee50946d09b278611b0e6e63d804f') in 0.012823 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Body.mat
+  artifactKey: Guid(43714b68324cc2c409d534d9874f2a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Body.mat using Guid(43714b68324cc2c409d534d9874f2a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ee24be9c9ccf7dcc15d2913aadd581') in 0.041149 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Main/Main.mat
+  artifactKey: Guid(ad5b00b7de3b09f4aad52d0feec05f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Main/Main.mat using Guid(ad5b00b7de3b09f4aad52d0feec05f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f9bfdf0a2a25bf4fd4e49720c9b4ff2') in 0.011348 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.053604 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 3.mat
+  artifactKey: Guid(b6416d12123b1ea43864a65ee73f1d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 3.mat using Guid(b6416d12123b1ea43864a65ee73f1d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1af44bc7a8db71d23b63db58153fc408') in 0.014473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 10.mat
+  artifactKey: Guid(a70f354d9377da945a1639bef81f79e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 10.mat using Guid(a70f354d9377da945a1639bef81f79e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb551e7183f121fa041cf110380a74d') in 0.011701 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 4.mat
+  artifactKey: Guid(0c1605d22b9269a40b877993ac754cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 4.mat using Guid(0c1605d22b9269a40b877993ac754cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dee7b41cde9857ddf03b4625ae2063c') in 0.012496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 6.mat
+  artifactKey: Guid(13dd2e38b56c0464faf87313d0ce7512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 6.mat using Guid(13dd2e38b56c0464faf87313d0ce7512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a68011cfd9c1b4393450d070802869f') in 0.011791 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 7.mat
+  artifactKey: Guid(4a41ca5e0be7028479a7b8a057e621ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 7.mat using Guid(4a41ca5e0be7028479a7b8a057e621ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c63ed0185d78ba4d6b49eb2f43ae614') in 0.010715 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 2.mat
+  artifactKey: Guid(88bcf2646c7107c499a43102746e3406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 2.mat using Guid(88bcf2646c7107c499a43102746e3406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd99988086a638c4b1b4bf953c359071') in 0.014249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Flat/Pink.mat
+  artifactKey: Guid(83610ce09b49a3e4aba39d93116e5183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Flat/Pink.mat using Guid(83610ce09b49a3e4aba39d93116e5183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3ec0f10858ca5ab33b137dfdf0b220') in 0.010001 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.051951 seconds.
+  path: Assets/Art/Models/Environment/Level_1/Pen/Materials/qianbi_lambert2_AlbedoTransparency.mat
+  artifactKey: Guid(97266a2be25c484408b200bbecfb6dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_1/Pen/Materials/qianbi_lambert2_AlbedoTransparency.mat using Guid(97266a2be25c484408b200bbecfb6dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eccda9cfc2383ab4581c55bd195f5f0') in 0.013670 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.040417 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Skybox/SkyboxLite.mat
+  artifactKey: Guid(f6c51332ac7d92541a38fb263b09d2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Skybox/SkyboxLite.mat using Guid(f6c51332ac7d92541a38fb263b09d2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3375f92cfe94ecba9758fd3c7d90cde4') in 0.075124 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 16.109415 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Off.mat
+  artifactKey: Guid(cfb52ccb2f26565438c5a43808c29b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Off.mat using Guid(cfb52ccb2f26565438c5a43808c29b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7537fdd3193277456a39e7af441bf286') in 0.016883 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

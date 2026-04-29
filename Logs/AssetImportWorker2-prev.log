@@ -1,0 +1,444 @@
+Using pre-set license
+Built from '2022.3/china_unity/release' branch; Version is '2022.3.20f1c1 (82a5dab7aa2a) revision 8562138'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16004 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Editor\2022.3.20f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+D:/Program Files/Unity/Editor/毕业设计
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+51238
+Successfully changed project path to: D:/Program Files/Unity/Editor/毕业设计
+D:/Program Files/Unity/Editor/毕业设计
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [66084] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 2411303761 [EditorId] 2411303761 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [66084] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 2411303761 [EditorId] 2411303761 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 39.71 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.20f1c1 (82a5dab7aa2a)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/毕业设计/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     5994 MB
+    Driver:   32.0.15.9579
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010453 seconds.
+- Loaded All Assemblies, in  0.336 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 1279 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.574 seconds
+Domain Reload Profiling: 1906ms
+	BeginReloadAssembly (122ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (120ms)
+		LoadAssemblies (120ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (117ms)
+			TypeCache.Refresh (116ms)
+				TypeCache.ScanAssembly (105ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1574ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1534ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1395ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (93ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.834 seconds
+Refreshing native plugins compatible for Editor in 11.22 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.391 seconds
+Domain Reload Profiling: 2218ms
+	BeginReloadAssembly (139ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (607ms)
+		LoadAssemblies (457ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (237ms)
+			TypeCache.Refresh (200ms)
+				TypeCache.ScanAssembly (181ms)
+			ScanForSourceGeneratedMonoScriptInfo (26ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1391ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1210ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (1041ms)
+			ProcessInitializeOnLoadMethodAttributes (47ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 9.32 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7028 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.1 MB). Loaded Objects now: 7483.
+Memory consumption went from 271.4 MB to 270.2 MB.
+Total: 3.895800 ms (FindLiveObjects: 0.395500 ms CreateObjectMapping: 0.252100 ms MarkObjects: 2.906900 ms  DeleteObjects: 0.340300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 355004.126765 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Demos/Demo 3.unity
+  artifactKey: Guid(c58f80a30445b304dbfda7a8351ebe38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Demos/Demo 3.unity using Guid(c58f80a30445b304dbfda7a8351ebe38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30cf3d65385a645acfa0a77a7c4110a0') in 0.003663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 16.238545 seconds.
+  path: Assets/Scenes/Level3.unity
+  artifactKey: Guid(ebe9bebb59a2ad040a6c08cdde33db09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level3.unity using Guid(ebe9bebb59a2ad040a6c08cdde33db09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5ad4986ad8cef16d7d5c8a2dda947c') in 0.000844 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 37.591323 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Door_Centered.prefab
+  artifactKey: Guid(a0543a2f10811444ca54412aa5190589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Door_Centered.prefab using Guid(a0543a2f10811444ca54412aa5190589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ad17aa6c926c5c8523859175e905e4') in 0.249147 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 1.458033 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Light Blinking 1.prefab
+  artifactKey: Guid(fdea0b74530427442b7943349ffac202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Light Blinking 1.prefab using Guid(fdea0b74530427442b7943349ffac202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f612748d1becb98f902dbfb9bd7a712') in 0.043018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 36.476271 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab
+  artifactKey: Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab using Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fe16aa6d8ab0d4f9806a18bbbf9da10') in 0.014419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.003428 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled_Half.prefab
+  artifactKey: Guid(35313d97f3429b44bb658de781685b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled_Half.prefab using Guid(35313d97f3429b44bb658de781685b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0f89655095b1f743c96a7dbf175cd2') in 0.013503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 345.369629 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab
+  artifactKey: Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab using Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4a3352ad352fbd26a65660ed830909e') in 0.015894 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 33.231935 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab
+  artifactKey: Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Floor_Tiled.prefab using Guid(7094cb3820bfd3f429e54690dccb7fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dedb618526681b3501f951691b2c598') in 0.010531 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 184.684061 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Flat/Yellow.mat
+  artifactKey: Guid(4748d3fc9066c3e478af6c5557efe03a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Flat/Yellow.mat using Guid(4748d3fc9066c3e478af6c5557efe03a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a363f77a2e09ff97bb18e26a43beb4') in 0.033781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.029368 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Wood/Wood.mat
+  artifactKey: Guid(799bb8c2507f07c4e9277ab9245f6ab7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Wood/Wood.mat using Guid(799bb8c2507f07c4e9277ab9245f6ab7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4792d4578a42fc6caeb87900cf8b9949') in 0.012177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.710008 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Walls/Materials/walls2.mat
+  artifactKey: Guid(d661ad16f368f8e4b8f611dd04563b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Walls/Materials/walls2.mat using Guid(d661ad16f368f8e4b8f611dd04563b49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80f211ef0af7a6fba5686972053dc0c2') in 0.014135 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.066712 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Flat/White 1.mat
+  artifactKey: Guid(7d9795e69387e744cb5b76a0ac4d8d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Flat/White 1.mat using Guid(7d9795e69387e744cb5b76a0ac4d8d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed236c55fd4bc0db82e2089928835253') in 0.011274 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/Models/Environment/Level_born/Table/Table_basecolor.mat
+  artifactKey: Guid(b5a3ce0f809237e4fa1ffad3717676e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/Table/Table_basecolor.mat using Guid(b5a3ce0f809237e4fa1ffad3717676e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9fbe39c861813727102d2b953d18a46') in 0.010996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.019165 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Materials/Blue_Mat.mat
+  artifactKey: Guid(979aef027a1c86c42a15ce35fce366fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Materials/Blue_Mat.mat using Guid(979aef027a1c86c42a15ce35fce366fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12fe88a6d45af235abe8ecfe65079c24') in 0.008506 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Models/Environment/Level_born/Cabin/Cabin_BaseColor.mat
+  artifactKey: Guid(0b5a5457f71d5f848a392c51eadce294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/Cabin/Cabin_BaseColor.mat using Guid(0b5a5457f71d5f848a392c51eadce294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4360ea487265cde2efb47f47361a6433') in 0.011938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Flat/Black.mat
+  artifactKey: Guid(7d027deceb7c1b54d8d28695fd6d59b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Flat/Black.mat using Guid(7d027deceb7c1b54d8d28695fd6d59b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bb8455f25987aa695dfcfc075f2755d') in 0.016459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Models/Environment/Level_born/bed/bed.mat
+  artifactKey: Guid(0721e71f70902a8478812963773ca713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/bed/bed.mat using Guid(0721e71f70902a8478812963773ca713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcca819be6bc2c9a9e91e04d3cb553fd') in 0.015244 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Materials/Blank.mat
+  artifactKey: Guid(2974daa553847cd498cadad58769eaf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Materials/Blank.mat using Guid(2974daa553847cd498cadad58769eaf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6443669c57074cec821ddb9d062da9a') in 0.014261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.083556 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Ramp_Mesh.fbx
+  artifactKey: Guid(426a2785f8a940049aac2c246661cf09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Ramp_Mesh.fbx using Guid(426a2785f8a940049aac2c246661cf09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c696092d8389d9be52d11b49ddad5967') in 0.032368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Stairs_650_400_300_Mesh.fbx
+  artifactKey: Guid(7e0223e1d3e1733499accfa5ebffb67e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Stairs_650_400_300_Mesh.fbx using Guid(7e0223e1d3e1733499accfa5ebffb67e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21192ec3f54010158d91b0fa0e38324') in 0.044007 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 123.984088 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Window_Cutout.prefab
+  artifactKey: Guid(7c101b28d303b944e9210f766a4c2bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Window_Cutout.prefab using Guid(7c101b28d303b944e9210f766a4c2bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c973f47ebd7314ee6dfb7c5a0039bce2') in 0.590138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+========================================================================
+Received Import Request.
+  Time since last request: 868.667873 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Floor_Tiled.prefab
+  artifactKey: Guid(cfa95d1ff4739ae499a3d23e6829b0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Floor_Tiled.prefab using Guid(cfa95d1ff4739ae499a3d23e6829b0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c572a43d778f7852caaa9c60d6b2303a') in 0.014631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 1.142262 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Light Blinking.prefab
+  artifactKey: Guid(6733942b4432eb242b6d900f8f49b10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Light Blinking.prefab using Guid(6733942b4432eb242b6d900f8f49b10a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b0a31c268e5949cfb7657944f132d3f') in 0.012596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 7.778043 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall.prefab
+  artifactKey: Guid(8eee444592be2d94682cbda046aa6161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall.prefab using Guid(8eee444592be2d94682cbda046aa6161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dae057a063b58116f2272065b68f1d72') in 0.026446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 1.497367 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall With Door.prefab
+  artifactKey: Guid(4fefcaf69e3dd3f448ff7ed475b1eccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall With Door.prefab using Guid(4fefcaf69e3dd3f448ff7ed475b1eccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85856ba545baab7ffac0cebed339a0cb') in 0.020501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 39
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_1.prefab
+  artifactKey: Guid(c6baa80ee11b36f4189d1b0f085f0fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_1.prefab using Guid(c6baa80ee11b36f4189d1b0f085f0fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0b9ae08b923321074b0f33b74702bd9') in 0.014633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_2.prefab
+  artifactKey: Guid(5be1710c4d7a1fa479f1e5adf623b7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_2.prefab using Guid(5be1710c4d7a1fa479f1e5adf623b7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863939dd4812b125e38b302b839e69af') in 0.011824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.079236 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_6.prefab
+  artifactKey: Guid(2941e37437a7cdb47b9c9e501569715b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_6.prefab using Guid(2941e37437a7cdb47b9c9e501569715b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c43585807f402dfef22ea15c265cc99c') in 0.012669 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.049762 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Box_Trim.prefab
+  artifactKey: Guid(473816d92e6b6444f8ba28440c9aaf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Box_Trim.prefab using Guid(473816d92e6b6444f8ba28440c9aaf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a220f9bfc956e3aa82b72b49f8bbd0') in 0.016119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Extension_WIth_Trim.prefab
+  artifactKey: Guid(ac4b02bc11806db498189d3f836ed108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Extension_WIth_Trim.prefab using Guid(ac4b02bc11806db498189d3f836ed108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8688c956c98df7056dab5b484ba44bc') in 0.015699 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_7.prefab
+  artifactKey: Guid(362684597f121ba42934ad0c93712686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Wall_Interior_Angled_7.prefab using Guid(362684597f121ba42934ad0c93712686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619519e7cf8d2af844935e167da7b175') in 0.014821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.396121 seconds.
+  path: Assets/Goodies!/Cozy Room Pack/Prefabs/Window_Cutout.prefab
+  artifactKey: Guid(285888196e740244890f641a052df4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Goodies!/Cozy Room Pack/Prefabs/Window_Cutout.prefab using Guid(285888196e740244890f641a052df4f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a55f5e83725d04ca324ec8af7c689ca9') in 0.020319 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

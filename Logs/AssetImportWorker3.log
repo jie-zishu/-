@@ -1,0 +1,483 @@
+Using pre-set license
+Built from '2022.3/china_unity/release' branch; Version is '2022.3.20f1c1 (82a5dab7aa2a) revision 8562138'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16004 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity\Editor\2022.3.20f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+D:/Program Files/Unity/Editor/姣曚笟璁捐
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+53934
+Successfully changed project path to: D:/Program Files/Unity/Editor/姣曚笟璁捐
+D:/Program Files/Unity/Editor/姣曚笟璁捐
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [43128] Host "[IP] 192.168.158.4 [Port] 0 [Flags] 2 [Guid] 4034571682 [EditorId] 4034571682 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [43128] Host "[IP] 192.168.158.4 [Port] 0 [Flags] 2 [Guid] 4034571682 [EditorId] 4034571682 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 38.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.20f1c1 (82a5dab7aa2a)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/姣曚笟璁捐/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     5994 MB
+    Driver:   32.0.15.9579
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.013408 seconds.
+- Loaded All Assemblies, in  0.398 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 1816 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.138 seconds
+Domain Reload Profiling: 2531ms
+	BeginReloadAssembly (156ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (129ms)
+		LoadAssemblies (152ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (126ms)
+			TypeCache.Refresh (125ms)
+				TypeCache.ScanAssembly (114ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (2138ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2093ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1961ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (87ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.154 seconds
+Refreshing native plugins compatible for Editor in 14.83 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.587 seconds
+Domain Reload Profiling: 2725ms
+	BeginReloadAssembly (211ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (830ms)
+		LoadAssemblies (654ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (317ms)
+			TypeCache.Refresh (273ms)
+				TypeCache.ScanAssembly (250ms)
+			ScanForSourceGeneratedMonoScriptInfo (32ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1587ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1414ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (1253ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 11.35 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7028 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.1 MB). Loaded Objects now: 7486.
+Memory consumption went from 271.7 MB to 270.6 MB.
+Total: 4.339700 ms (FindLiveObjects: 0.343000 ms CreateObjectMapping: 0.222700 ms MarkObjects: 3.467300 ms  DeleteObjects: 0.305500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 62b5816608c3102f162a1797e29626cf -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 175880.366189 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f5bc688c08894ffa1c5e6de7217a5ad') in 0.290509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f39628caef7e4b7c3b8a5a6d580430') in 0.012666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.427055 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e797b7881e67eaf92ab947ff3f4da4a0') in 0.012628 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49bf32cb9c751844588949ed0fcb636d') in 0.011812 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3.739985 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bfc6b8bdfa980a26079de0eb1c92a61') in 0.013103 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9c3757d63542d6d7ab48413e0afee8') in 0.011430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 27.042227 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec8f046b36bce3e60d63cef369e8618') in 0.012490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0fe66bf05348b14f3af1ef9d09672d') in 0.017378 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.853294 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c576136ac088c12cc7410128081e68') in 0.010722 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e1059f8b489e5db086b00dca5d35a17') in 0.009959 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.468213 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d2c9917fd88b4ab35732cb57919126') in 0.013590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8b7a7fe92266d777b2b144bdb68848') in 0.011228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 8.115256 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29a4577f8c0d2fef3c00e0aef418db12') in 0.012249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a89888713fbfdf37be2eb2de0ac8ac19') in 0.016816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3.774143 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564029f6c3919f4279157756409e1e28') in 0.012439 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd57ffbcbc9317fac3a448cc155b9bdf') in 0.013258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 677.542927 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75fe129b97210586dfdd51bd2cee0af4') in 0.017735 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288026ab3ece8ae28c84664d0626c24b') in 0.013138 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 9.177554 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab
+  artifactKey: Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book1.prefab using Guid(49495875111c1f2418f6958946bd88d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1f48b96f01062a1f71782a4a2daed7') in 0.013995 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22a035c414ab82d7c9327a3e49682743') in 0.014014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 51197.957173 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Door_Centered_Wide.prefab
+  artifactKey: Guid(1f313e547132b3049aeb10e7856173f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Door_Centered_Wide.prefab using Guid(1f313e547132b3049aeb10e7856173f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a86dae4189cb3cad4ce349376ce385') in 0.100698 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 698.571725 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Computer_Tower.prefab
+  artifactKey: Guid(ff15181b9da63604a91b034c03017431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Computer_Tower.prefab using Guid(ff15181b9da63604a91b034c03017431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2d1f929577a9d1b0f6956b047d94fe') in 0.019584 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.052408 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Handheld_Gaming_Device.prefab
+  artifactKey: Guid(38578cecd54e71a40b4685d7f8b5d118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Handheld_Gaming_Device.prefab using Guid(38578cecd54e71a40b4685d7f8b5d118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc6250ab74f405c34ef0c1de9ca39b6f') in 0.012176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.056425 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Door_Centered_Wide.prefab
+  artifactKey: Guid(cd434a879cf4d0c4e95755003da5e50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Door_Centered_Wide.prefab using Guid(cd434a879cf4d0c4e95755003da5e50c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '290f226661460eeaf473c26fd49575c5') in 0.020009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 0.024718 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Mouse.prefab
+  artifactKey: Guid(fb1891c7bc14b9c40a5495a23e9e6452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Mouse.prefab using Guid(fb1891c7bc14b9c40a5495a23e9e6452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958ba50160e8918534e1102672ba1746') in 0.012865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Window_Cutout.prefab
+  artifactKey: Guid(7c101b28d303b944e9210f766a4c2bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Window_Cutout.prefab using Guid(7c101b28d303b944e9210f766a4c2bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b7fe5c34beedb9a5ff1ed8fc7195f00') in 0.042158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Tissues.prefab
+  artifactKey: Guid(db3c2277a5094f24ab4042751ad9b1e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Tissues.prefab using Guid(db3c2277a5094f24ab4042751ad9b1e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff198837a266c32d3b8f939449c1790') in 0.011947 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Window_Cutout_Centered.prefab
+  artifactKey: Guid(a8990ba02eb32944c8bc187e30f3c07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Window_Cutout_Centered.prefab using Guid(a8990ba02eb32944c8bc187e30f3c07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4301b3caabced3655b09fdcb5f350c6') in 0.022310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 60
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Extension_WIth_Trim.prefab
+  artifactKey: Guid(9953a5e70dba7034387c9930aaccd334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Extension_WIth_Trim.prefab using Guid(9953a5e70dba7034387c9930aaccd334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9f307c88038685139d911fc14f3cb0') in 0.014981 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Extension.prefab
+  artifactKey: Guid(271af4b5d41663a4dbe948252dbb3d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Extension.prefab using Guid(271af4b5d41663a4dbe948252dbb3d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd3576024202826a5e1f340570603c73') in 0.014781 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Keyboard.prefab
+  artifactKey: Guid(95b36bc1bc872014393e1215c7c7b85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Keyboard.prefab using Guid(95b36bc1bc872014393e1215c7c7b85d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ff0bcf01c82dc0307b21fa8fe77fd5e') in 0.013034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 34.544579 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0aa51bb4dfc3bac9b07a4748282a1ce') in 0.017634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_4.prefab
+  artifactKey: Guid(238317b7a1fcbd9449803ad6da9ed805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_4.prefab using Guid(238317b7a1fcbd9449803ad6da9ed805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696401b182bc62af959b60996ada05f9') in 0.021491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Candle.prefab
+  artifactKey: Guid(c6fc8a799c4b4584fb780739034b241b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Candle.prefab using Guid(c6fc8a799c4b4584fb780739034b241b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b59e79dc3252d93d7ee97f42e1bc1eb') in 0.013150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Wall_Interior.prefab
+  artifactKey: Guid(0e14b01f1b1e55341a31f26e85e1d23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Wall_Interior.prefab using Guid(0e14b01f1b1e55341a31f26e85e1d23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d576bfd47a09d0dc1bcf0df67ddc5fa') in 0.018079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Wall_Interior 1.prefab
+  artifactKey: Guid(ee0254abc02563449ae8bcd9e8b1bdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Wall_Interior 1.prefab using Guid(ee0254abc02563449ae8bcd9e8b1bdea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b95151f97bf23848b21490204f6eb109') in 0.014115 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Door_Centered_Wide.prefab
+  artifactKey: Guid(1f313e547132b3049aeb10e7856173f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Door_Centered_Wide.prefab using Guid(1f313e547132b3049aeb10e7856173f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4459ba02efc3c13980920e849ec8abe') in 0.019704 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
