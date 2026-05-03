@@ -3828,6 +3828,7 @@ GameObject:
   - component: {fileID: 259182185}
   - component: {fileID: 259182184}
   - component: {fileID: 259182188}
+  - component: {fileID: 259182189}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -3930,6 +3931,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414ef753dd2b6d440bb9d37427556416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &259182189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259182183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b03d642e0711cb40866451a63777908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneDialogues:
+  - sceneName: BornScene
+    lines: []
+    autoStart: 1
+  - sceneName: Level1
+    lines: []
+    autoStart: 1
+  - sceneName: Level2
+    lines:
+    - "\u6D4B\u8BD5\u4E00"
+    - "\u6D4B\u8BD5\u4E8C"
+    autoStart: 1
+  - sceneName: Level3
+    lines: []
+    autoStart: 1
+  defaultLines: []
+  consumeAllClicks: 1
+  panelHeight: 180
+  panelBottomMargin: 24
+  panelPadding: {x: 28, y: 20}
+  panelColor: {r: 0, g: 0, b: 0, a: 0.72}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  fontSize: 28
 --- !u!1001 &259429984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36058,6 +36094,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 259182187}
   - {fileID: 2021021596}
   - {fileID: 421819374}
   - {fileID: 69987069}
@@ -36065,7 +36102,6 @@ SceneRoots:
   - {fileID: 1557868413}
   - {fileID: 1889084298}
   - {fileID: 1897749654}
-  - {fileID: 259182187}
   - {fileID: 1309103431}
   - {fileID: 483557074}
   - {fileID: 1886403362}

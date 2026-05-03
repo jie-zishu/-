@@ -6457,13 +6457,14 @@ GameObject:
   - component: {fileID: 994210849}
   - component: {fileID: 994210848}
   - component: {fileID: 994210852}
+  - component: {fileID: 994210853}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &994210848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6559,6 +6560,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414ef753dd2b6d440bb9d37427556416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &994210853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994210847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b03d642e0711cb40866451a63777908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneDialogues:
+  - sceneName: BornScene
+    lines: []
+    autoStart: 1
+  - sceneName: Level1
+    lines: []
+    autoStart: 1
+  - sceneName: Level2
+    lines: []
+    autoStart: 1
+  - sceneName: Level3
+    lines:
+    - "\u6D4B\u8BD5\u4E00"
+    - "\u6D4B\u8BD5\u4E8C"
+    autoStart: 1
+  defaultLines: []
+  consumeAllClicks: 1
+  panelHeight: 180
+  panelBottomMargin: 24
+  panelPadding: {x: 28, y: 20}
+  panelColor: {r: 0, g: 0, b: 0, a: 0.72}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  fontSize: 28
 --- !u!1001 &994979406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9144,7 +9180,7 @@ PrefabInstance:
     - target: {fileID: 7591643551230664512, guid: cf814403182d5184faa91175177e8a0d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.927
+      value: -1.9250001
       objectReference: {fileID: 0}
     - target: {fileID: 7591643551230664512, guid: cf814403182d5184faa91175177e8a0d,
         type: 3}

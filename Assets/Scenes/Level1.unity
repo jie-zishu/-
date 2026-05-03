@@ -7271,6 +7271,7 @@ GameObject:
   - component: {fileID: 1628440344}
   - component: {fileID: 1628440343}
   - component: {fileID: 1628440347}
+  - component: {fileID: 1628440348}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -7373,6 +7374,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414ef753dd2b6d440bb9d37427556416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1628440348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628440342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b03d642e0711cb40866451a63777908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneDialogues:
+  - sceneName: BornScene
+    lines:
+    - "\u7EC8\u4E8E\u5DEE\u4E0D\u591A\u628A\u884C\u674E\u6536\u62FE\u5B8C\u4E86\uFF0C\u4E5F\u662F\u6BD5\u4E1A\u4E86\u3002"
+    - "\u597D\u7D2F\u554A\uFF0C\u6700\u540E\u8DB4\u5728\u8FD9\u4E2A\u4E66\u684C\u4E0A\u7761\u89C9\u4F11\u606F\u4E00\u4F1A\u513F\u5427\u3002"
+    autoStart: 1
+  - sceneName: Level1
+    lines:
+    - "\u6D4B\u8BD5\u4E00"
+    - "\u6D4B\u8BD5\u4E8C"
+    autoStart: 1
+  - sceneName: Level2
+    lines: []
+    autoStart: 1
+  - sceneName: Level3
+    lines: []
+    autoStart: 1
+  defaultLines: []
+  consumeAllClicks: 1
+  panelHeight: 180
+  panelBottomMargin: 24
+  panelPadding: {x: 28, y: 20}
+  panelColor: {r: 0, g: 0, b: 0, a: 0.72}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  fontSize: 28
 --- !u!1001 &1671528331
 PrefabInstance:
   m_ObjectHideFlags: 0

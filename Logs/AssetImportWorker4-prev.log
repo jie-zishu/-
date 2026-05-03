@@ -15,7 +15,7 @@ D:/Program Files/Unity/Editor/姣曚笟璁捐
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-51238
+53934
 Successfully changed project path to: D:/Program Files/Unity/Editor/姣曚笟璁捐
 D:/Program Files/Unity/Editor/姣曚笟璁捐
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ D:/Program Files/Unity/Editor/姣曚笟璁捐
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10260] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 510764317 [EditorId] 510764317 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [67480] Host "[IP] 192.168.158.4 [Port] 0 [Flags] 2 [Guid] 2908428250 [EditorId] 2908428250 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10260] Host "[IP] 10.55.165.151 [Port] 0 [Flags] 2 [Guid] 510764317 [EditorId] 510764317 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [67480] Host "[IP] 192.168.158.4 [Port] 0 [Flags] 2 [Guid] 2908428250 [EditorId] 2908428250 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-7TIDKNDB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
-Refreshing native plugins compatible for Editor in 29.20 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 27.31 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.20f1c1 (82a5dab7aa2a)
 [Subsystems] Discovering subsystems at path D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Resources/UnitySubsystems
@@ -70,47 +70,47 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56232
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Program Files/Unity/Editor/2022.3.20f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011831 seconds.
-- Loaded All Assemblies, in  0.340 seconds
+Registered in 0.013666 seconds.
+- Loaded All Assemblies, in  0.400 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 2105 ms
+Android Extension - Scanning For ADB Devices 1856 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.420 seconds
-Domain Reload Profiling: 2756ms
-	BeginReloadAssembly (129ms)
+- Finished resetting the current domain, in  2.130 seconds
+Domain Reload Profiling: 2526ms
+	BeginReloadAssembly (155ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (25ms)
+	RebuildCommonClasses (34ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (118ms)
-		LoadAssemblies (125ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (131ms)
+		LoadAssemblies (151ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (116ms)
-			TypeCache.Refresh (114ms)
-				TypeCache.ScanAssembly (104ms)
+		AnalyzeDomain (128ms)
+			TypeCache.Refresh (127ms)
+				TypeCache.ScanAssembly (114ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (2420ms)
+	FinalizeReload (2131ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2379ms)
+		SetupLoadedEditorAssemblies (2088ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2249ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (1958ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (87ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -119,52 +119,52 @@ Domain Reload Profiling: 2756ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.858 seconds
-Refreshing native plugins compatible for Editor in 16.13 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.163 seconds
+Refreshing native plugins compatible for Editor in 10.23 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.348 seconds
-Domain Reload Profiling: 2198ms
-	BeginReloadAssembly (127ms)
+- Finished resetting the current domain, in  1.587 seconds
+Domain Reload Profiling: 2734ms
+	BeginReloadAssembly (212ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (17ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (647ms)
-		LoadAssemblies (482ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (837ms)
+		LoadAssemblies (654ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (244ms)
-			TypeCache.Refresh (208ms)
-				TypeCache.ScanAssembly (190ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1349ms)
+		AnalyzeDomain (324ms)
+			TypeCache.Refresh (279ms)
+				TypeCache.ScanAssembly (256ms)
+			ScanForSourceGeneratedMonoScriptInfo (33ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1588ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1156ms)
+		SetupLoadedEditorAssemblies (1408ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (24ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (988ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (1251ms)
 			ProcessInitializeOnLoadMethodAttributes (40ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 8.93 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 12.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 7028 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 88 unused Assets / (1.1 MB). Loaded Objects now: 7483.
-Memory consumption went from 271.6 MB to 270.4 MB.
-Total: 4.032900 ms (FindLiveObjects: 0.354500 ms CreateObjectMapping: 0.229800 ms MarkObjects: 3.164000 ms  DeleteObjects: 0.283500 ms)
+Unloading 88 unused Assets / (1.1 MB). Loaded Objects now: 7486.
+Memory consumption went from 271.6 MB to 270.5 MB.
+Total: 4.458600 ms (FindLiveObjects: 0.391600 ms CreateObjectMapping: 0.248700 ms MarkObjects: 3.482000 ms  DeleteObjects: 0.335000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,206 +182,415 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 356968.954432 seconds.
-  path: Assets/Art/Models/Environment/Level_2/Cassete/Materials/Cassete_BaseColor_Green_512.mat
-  artifactKey: Guid(28dc51648d339ca4eb74ba9014b440b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_2/Cassete/Materials/Cassete_BaseColor_Green_512.mat using Guid(28dc51648d339ca4eb74ba9014b440b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1693069b5f2cfde58a20a20c41c2ae86') in 0.260422 seconds
+  Time since last request: 175880.365936 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5c322c21dae2eaf109d8dffcc97b8d') in 0.290616 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 1.450048 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Fish.mat
-  artifactKey: Guid(7f3e73c99f8d09e44928c72808af6aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Fish.mat using Guid(7f3e73c99f8d09e44928c72808af6aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9dce2a26f919e48bce11cbf630358d') in 0.008977 seconds
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89101d16b0f69be52169f584ebb7076c') in 0.012530 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.076987 seconds.
-  path: Assets/Art/Models/Environment/Level_born/Fox/fox_basecolor.mat
-  artifactKey: Guid(b006557c5d2399c4195d3f9f2094253b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_born/Fox/fox_basecolor.mat using Guid(b006557c5d2399c4195d3f9f2094253b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af86a2dbcda774b2b1fd538db60b64e') in 0.015328 seconds
+  Time since last request: 2.425836 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1379414ac6561ae2e74996131cc8d754') in 0.012282 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Art/Models/Environment/Level_1/Pen/Materials/gangbi_lambert3_AlbedoTransparency.mat
-  artifactKey: Guid(0598512097572154d804ee6b6b93133d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_1/Pen/Materials/gangbi_lambert3_AlbedoTransparency.mat using Guid(0598512097572154d804ee6b6b93133d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071d6c1bbae2d9b72b423de71874553a') in 0.013487 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.047035 seconds.
-  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Tunnel_Mesh.fbx
-  artifactKey: Guid(f712806514868e54699156ec05dcb749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Tunnel_Mesh.fbx using Guid(f712806514868e54699156ec05dcb749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e93fb57bf277e665a8cb050b1364f7a') in 0.054769 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Box_350x250x300_Mesh.fbx
-  artifactKey: Guid(d2f0da3998423f44594868ffed55c3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Models/Box_350x250x300_Mesh.fbx using Guid(d2f0da3998423f44594868ffed55c3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a42ca704f84105352d73fe6692f39d') in 0.044977 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Models/Environment/Level_1/Hammer/Materials/Hammer_BaseColor.mat
-  artifactKey: Guid(ea7f14dd71e32d446b357cfb30eafbd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_1/Hammer/Materials/Hammer_BaseColor.mat using Guid(ea7f14dd71e32d446b357cfb30eafbd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec96fe54d246cecc599a8c1d239ec95') in 0.017338 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.420384 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Blue.mat
-  artifactKey: Guid(68e240b1cc4224347b6cf163a6bdc211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Blue.mat using Guid(68e240b1cc4224347b6cf163a6bdc211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd74cfd676bef7bb727a0b14ed52d35b2') in 0.010724 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Pink Low.mat
-  artifactKey: Guid(50bf7c6ca268c4a4c87f4a105a13ba76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Glowing/Light Pink Low.mat using Guid(50bf7c6ca268c4a4c87f4a105a13ba76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94579fe894fca98883fb11b1117b06bc') in 0.009171 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Legs.mat
-  artifactKey: Guid(8b25e99361ac31d4e9ae83c46aee69ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Legs.mat using Guid(8b25e99361ac31d4e9ae83c46aee69ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a96ead9fb282144af194d28700dbee') in 0.035799 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Art/Models/Environment/Level_1/Pen/Materials/maobi_blinn1_AlbedoTransparency.mat
-  artifactKey: Guid(8594d368e27f29d44bb3344ee02b9bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_1/Pen/Materials/maobi_blinn1_AlbedoTransparency.mat using Guid(8594d368e27f29d44bb3344ee02b9bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec639d386c0be3acb8c17faa63151d6a') in 0.010502 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.052764 seconds.
-  path: Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Arms.mat
-  artifactKey: Guid(766fd3ff04aab4745a764d33daac86fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OtherProjectAssets/StarterAssets/ThirdPersonController/Character/Materials/M_Armature_Arms.mat using Guid(766fd3ff04aab4745a764d33daac86fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364e326f6f19ac29d990ed7b81b1bb07') in 0.024594 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 5
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Plants/Plants.mat
-  artifactKey: Guid(9db94657572fc6c4b8e4f3171fcfe13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Plants/Plants.mat using Guid(9db94657572fc6c4b8e4f3171fcfe13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a68d5dbd9edac8fdc84920081589b2db') in 0.012823 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Plastic.mat
-  artifactKey: Guid(8d28b890dcd32eb4083b20c2a5db8879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Plastic.mat using Guid(8d28b890dcd32eb4083b20c2a5db8879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e54cb8eb6411c60c98ff1ed2cc7612b') in 0.014829 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 9.mat
-  artifactKey: Guid(5f2997a6e69bbb147b65d202066a7e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 9.mat using Guid(5f2997a6e69bbb147b65d202066a7e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b0b0e88503a19e24360afb2de29cdcc') in 0.011891 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Posters.mat
-  artifactKey: Guid(3232f2a5202e59a4d9fef6779cfec98c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Posters.mat using Guid(3232f2a5202e59a4d9fef6779cfec98c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf2ed4bfe8e38279236ef1188fd8df4') in 0.011911 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 8.mat
-  artifactKey: Guid(ef025d4a366564e4a9b12b713ed4bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 8.mat using Guid(ef025d4a366564e4a9b12b713ed4bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03debc3e2a97f00ea9ec9e97025f0766') in 0.012041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 5.mat
-  artifactKey: Guid(33e63dbc980ef444b88347661cd82a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 5.mat using Guid(33e63dbc980ef444b88347661cd82a73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e48ed3dd72c0c346c4409d23169d8c') in 0.011126 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.035383 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Posters 1.mat
-  artifactKey: Guid(5740293007bdf5f469802ebf862ae1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Posters 1.mat using Guid(5740293007bdf5f469802ebf862ae1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4889995b65fed563dee398071e49560f') in 0.010455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.044373 seconds.
-  path: Assets/Art/Models/Environment/Level_1/Pen/Materials/shuicaibi_lambert2_AlbedoTransparency.mat
-  artifactKey: Guid(e7885e76ca8e40f44a22f9056ad8a369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_1/Pen/Materials/shuicaibi_lambert2_AlbedoTransparency.mat using Guid(e7885e76ca8e40f44a22f9056ad8a369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a807be5d42341e075287dc7c03990313') in 0.012696 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Models/Environment/Level_2/Stool/Materials/Stool_BaseColor.mat
-  artifactKey: Guid(6473b8c5ebcc66e4a9dbc5236e6ae8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Models/Environment/Level_2/Stool/Materials/Stool_BaseColor.mat using Guid(6473b8c5ebcc66e4a9dbc5236e6ae8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '093191c5eb090a06acc48bc5f5e04454') in 0.013033 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/String Lighs.mat
-  artifactKey: Guid(bee3e76d4f5234f4fad705deb9569cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/String Lighs.mat using Guid(bee3e76d4f5234f4fad705deb9569cf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24eed3b077e6772f59e465ac3fd75d61') in 0.010502 seconds
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb8bc8145154ce7f09e1924dd3495dc') in 0.015145 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3.736096 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2317834c646d727ef51168ca158b6e6') in 0.012721 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03b609f026ecab0e625950768886a9fb') in 0.011824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 27.043212 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159bf445ff3a6ec73daa5f7badfb1c6f') in 0.012519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f902319bd0603acf23ae5b2774c2e67e') in 0.012535 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.855506 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b015f59b8f81e02726473d18e2b70d') in 0.010739 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482f5c1e95221e54f253092c1758369a') in 0.010874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.468507 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c6ee1058cca60a25ff2f1f8a4c15d4') in 0.014354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05f48bf406c580afb0ab23e34a2c9f9b') in 0.010294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 8.113919 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3346b708964f8d68f8ec3e6c452c4637') in 0.014275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93540554599f01de810a26481677e7ae') in 0.015970 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3.773383 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503ea246f40c43098d7ec4d069531abc') in 0.012443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab
+  artifactKey: Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book3.prefab using Guid(4e1550db73b8c1142aa00eb1752231ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fd65dfbf947056df47d31d5cebcba6') in 0.013428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 677.543100 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88ca3ba5b0c12ed4928e3965b272b36') in 0.016922 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/OtherProjectAssets/StarterAssets/Environment/Art/Skybox/SkyboxLiteWarm.mat
-  artifactKey: Guid(aeab33f69c199e54794f516d31450ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OtherProjectAssets/StarterAssets/Environment/Art/Skybox/SkyboxLiteWarm.mat using Guid(aeab33f69c199e54794f516d31450ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6770f60701b57eefbc20535b4acc626d') in 0.069519 seconds
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a651c025959cf727caee6bfa4eded84') in 0.013643 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 16.040978 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Flat/Peach.mat
-  artifactKey: Guid(8f25824a5f847154fbe8b9d9ab24c2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Flat/Peach.mat using Guid(8f25824a5f847154fbe8b9d9ab24c2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b2817d948639a5b6132ccc8092ee14') in 0.014353 seconds
+  Time since last request: 9.177935 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f04ebe5d286a3a7ecf1b3d00831107') in 0.012618 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 1.mat
-  artifactKey: Guid(ba79afc95cea49d4bb9db34ecb41c8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Goodies!/Cozy Room Pack/Materials/Paintings/Painting 1.mat using Guid(ba79afc95cea49d4bb9db34ecb41c8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c551b7eaa54283fcd0b77713f3e7bdf2') in 0.012857 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7a22c9133398859938b2b72a1a49cb5') in 0.013677 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 47165.066698 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba039da77bcc477a2d366f18a98c473') in 0.070756 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.810314 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57518ea22d3a5824e9396fb8da450a86') in 0.013555 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 9.659069 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19e1686274ded3a5fcbcd8b8558e8455') in 0.017307 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3.113851 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab
+  artifactKey: Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book2.prefab using Guid(d8db14712824acd419d30fe6c0d96fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f59ec0917dfd7932e8830fc5f6fbc5f') in 0.012012 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 3811.635034 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book_Open.prefab
+  artifactKey: Guid(6cc7bf13a9ebcbe499ca970fab498dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book_Open.prefab using Guid(6cc7bf13a9ebcbe499ca970fab498dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c7eb4ef76886def5ea5b0a49176bac0') in 0.036403 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 2.383369 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book_Open.prefab
+  artifactKey: Guid(6cc7bf13a9ebcbe499ca970fab498dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book_Open.prefab using Guid(6cc7bf13a9ebcbe499ca970fab498dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ea2503a710a732c57d848133f5889a0') in 0.015346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 155.629877 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab
+  artifactKey: Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab using Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60507364ef6ee38ea6132c07f4500678') in 0.029005 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 47.388667 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab
+  artifactKey: Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab using Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e8256c72f1346832c7a9ffab6671ce') in 0.018862 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_4.prefab
+  artifactKey: Guid(238317b7a1fcbd9449803ad6da9ed805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_4.prefab using Guid(238317b7a1fcbd9449803ad6da9ed805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6921a7b4225d60996e6dc7e4bfa9413') in 0.021589 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_1.prefab
+  artifactKey: Guid(7f044d908061bef4d9d03363952d21bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_1.prefab using Guid(7f044d908061bef4d9d03363952d21bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015971360c49d13f3359227dc80598d5') in 0.020224 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 43.982133 seconds.
+  path: Assets/Art/Models/Environment/Level_born/Desk
+  artifactKey: Guid(0654b4fdfb1b8144cbff05836f8a4c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/Desk using Guid(0654b4fdfb1b8144cbff05836f8a4c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1639314a1b983491ada47b8e702aff3a') in 0.001563 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 52.057298 seconds.
+  path: Assets/Art/Models/Environment/Level_born/Desk/Wood.mat
+  artifactKey: Guid(97537ba55511bd14d88cc4102fae40f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/Desk/Wood.mat using Guid(97537ba55511bd14d88cc4102fae40f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2f9a08047f175ee14c2b0faeabfa04') in 0.148638 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 21.885161 seconds.
+  path: Assets/Art/Models/Environment/Level_born/Desk/Wood.mat
+  artifactKey: Guid(97537ba55511bd14d88cc4102fae40f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/Environment/Level_born/Desk/Wood.mat using Guid(97537ba55511bd14d88cc4102fae40f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b82ea539505ac8302144428bd28677d') in 0.013311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 580.484919 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/CoatRack.prefab
+  artifactKey: Guid(5d324e208bbc6ef4d9c8d52b9a341f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/CoatRack.prefab using Guid(5d324e208bbc6ef4d9c8d52b9a341f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5640cba5056c35ac1645530611f936') in 0.018525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.053021 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Filing_cabinet.prefab
+  artifactKey: Guid(2d1950282146d2340aebeed9bed695ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Filing_cabinet.prefab using Guid(2d1950282146d2340aebeed9bed695ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d774b98dacd1d74ca99adc3b26b477') in 0.011969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.057426 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Heater.prefab
+  artifactKey: Guid(657a98656c0ef5a4f82db0b6a31985b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Heater.prefab using Guid(657a98656c0ef5a4f82db0b6a31985b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20d0be0df22b06f8b09cb7d79785ca81') in 0.011736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.033250 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Monitor.prefab
+  artifactKey: Guid(23b22a5e700dba242bc78f04ab56a8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Monitor.prefab using Guid(23b22a5e700dba242bc78f04ab56a8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc846de39dc5b5c2814e2d810a6112de') in 0.012475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/TrashBin.prefab
+  artifactKey: Guid(73ac1bb1834ec60438d763b359730a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/TrashBin.prefab using Guid(73ac1bb1834ec60438d763b359730a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9851a6fd7fc90d5dfa5b0a181548aa60') in 0.015478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Window_Cover.prefab
+  artifactKey: Guid(7fd6c90e946d49d45821a3d83f4c5384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Window_Cover.prefab using Guid(7fd6c90e946d49d45821a3d83f4c5384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61a281eb6298fd099a3abf0132c0d0b') in 0.013217 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Box_Trim.prefab
+  artifactKey: Guid(b7f14bc58af908a43a11cf404561a721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Wall_Interior_Box_Trim.prefab using Guid(b7f14bc58af908a43a11cf404561a721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8c84856b49c0ef99527f91d95c4ef5') in 0.014653 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Wall_Interior.prefab
+  artifactKey: Guid(cf814403182d5184faa91175177e8a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Wall_Interior.prefab using Guid(cf814403182d5184faa91175177e8a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b91ff492334fae9705f86dd3ce4d20') in 0.014082 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Switch.prefab
+  artifactKey: Guid(635b1f2fdaab06e41b0a37907b88b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Switch.prefab using Guid(635b1f2fdaab06e41b0a37907b88b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba069ce0f9f6fa4a972ed593cb772e7') in 0.013163 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Light_Ceiling.prefab
+  artifactKey: Guid(1f42fcfa0e6bee940beb3cad5c09ecb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Light_Ceiling.prefab using Guid(1f42fcfa0e6bee940beb3cad5c09ecb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1502aacd9a860463fcb9f168bf0137') in 0.012342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Headphones_Cat_Ears.prefab
+  artifactKey: Guid(bff0f9a6d67b5864eb98a6b81ef418c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Headphones_Cat_Ears.prefab using Guid(bff0f9a6d67b5864eb98a6b81ef418c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7b25f2971e80761dd226eda0912ab88') in 0.014338 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/Level_3/Window.prefab
+  artifactKey: Guid(ddea415fa9576c64c85e032c41e5ae60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/Level_3/Window.prefab using Guid(ddea415fa9576c64c85e032c41e5ae60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043f94688899791412dc5152647fa723') in 0.014861 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 34.536071 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Book.prefab
+  artifactKey: Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Book.prefab using Guid(f81c6b4eefbf1f349b16dee770ba1e98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5304dc3caaea166a4f5ef7bbd61067') in 0.018489 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Cactus.prefab
+  artifactKey: Guid(319ed109e47648a49a55352f9dc1f390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Cactus.prefab using Guid(319ed109e47648a49a55352f9dc1f390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e1882a1b946a27c1cbbc60ce3757c4') in 0.014796 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Energy_Drink.prefab
+  artifactKey: Guid(586700257ad6eb849a9188662a6e3574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Energy_Drink.prefab using Guid(586700257ad6eb849a9188662a6e3574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5825569f77d78aaa25849f35bcbcde20') in 0.013117 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab
+  artifactKey: Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Chair1.prefab using Guid(fe970db8b2ac5b6408672baef9f259ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b448d2b3567e84c6a3e47e63b311ab1') in 0.015596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Heater.prefab
+  artifactKey: Guid(be790b2eeded68d428c46041aa61c780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Heater.prefab using Guid(be790b2eeded68d428c46041aa61c780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1645d5b015192378ec074aaefe420d11') in 0.012254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_1.prefab
+  artifactKey: Guid(7f044d908061bef4d9d03363952d21bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Prefabs/Environment/BornLevel/Frame_Standing_1.prefab using Guid(7f044d908061bef4d9d03363952d21bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9df2bb463de7a67f79c8391369980801') in 0.017701 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0
