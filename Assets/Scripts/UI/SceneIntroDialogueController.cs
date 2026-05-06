@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 #if ENABLE_INPUT_SYSTEM
@@ -18,12 +19,16 @@ public class SceneDialogueConfig
 [DisallowMultipleComponent]
 public class SceneIntroDialogueController : MonoBehaviour
 {
+    public UnityEvent onDialogueEnd;
+
     [Header("Scene Dialogue Mapping")]
     [SerializeField] private List<SceneDialogueConfig> sceneDialogues = new List<SceneDialogueConfig>();
     [TextArea(2, 6)] [SerializeField] private List<string> defaultLines = new List<string>();
 
     [Header("Click Behavior")]
     [SerializeField] private bool consumeAllClicks = true;
+
+    public bool IsDialogueActive() { return dialogueActive; }
 
     [Header("Dialogue Panel Style")]
     [SerializeField] private float panelHeight = 180f;
@@ -222,6 +227,7 @@ public class SceneIntroDialogueController : MonoBehaviour
     private void EndDialogue()
     {
         dialogueActive = false;
+        onDialogueEnd?.Invoke();
         currentLineIndex = 0;
         activeLines.Clear();
 
