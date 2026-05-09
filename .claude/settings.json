@@ -6,7 +6,10 @@
       "mcp__UnityMCP__manage_camera",
       "Read(//c/Users/ZiShu/.claude/skills/unity-mcp-skill/**)",
       "PowerShell(Get-Content \"C:\\\\Users\\\\ZiShu\\\\.claude\\\\projects\\\\d--Program-Files-Unity-Editor-----\\\\a4f339eb-82ad-45cd-b90f-24cf00cb0501.jsonl\" | Select-String \"user_id\" | Select-Object -First 5 | ForEach-Object { $_.ToString\\(\\).Substring\\(0, [Math]::Min\\(500, $_.ToString\\(\\).Length\\)\\) })",
-      "PowerShell(Get-Content \"C:\\\\Users\\\\ZiShu\\\\.claude\\\\projects\\\\d--Program-Files-Unity-Editor-----\\\\a4f339eb-82ad-45cd-b90f-24cf00cb0501.jsonl\" | Select-String \"user_id\" | Select-Object -First 5 | ForEach-Object { $_.ToString\\(\\) })"
+      "PowerShell(Get-Content \"C:\\\\Users\\\\ZiShu\\\\.claude\\\\projects\\\\d--Program-Files-Unity-Editor-----\\\\a4f339eb-82ad-45cd-b90f-24cf00cb0501.jsonl\" | Select-String \"user_id\" | Select-Object -First 5 | ForEach-Object { $_.ToString\\(\\) })",
+      "mcp__UnityMCP__execute_menu_item",
+      "mcp__UnityMCP__delete_script",
+      "Bash(grep -B1 \"m_Name: AI_Main Character_SitDown$\\\\|m_Name: AI_Main Character_SitDown_Sleep\" \"d:/Program Files/Unity/Editor/毕业设计/Assets/Art/Animations/Characters/MainCharacter/MainCharacterThirdPerson.controller\")"
     ]
   }
 }

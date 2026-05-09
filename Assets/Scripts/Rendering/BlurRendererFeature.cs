@@ -20,7 +20,15 @@ public class BlurRendererFeature : ScriptableRendererFeature
     public override void Create()
     {
         Instance = this;
+        settings.blurStrength = 0f;
         blurPass = new BlurRenderPass(settings);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        Instance = null;
+        blurPass?.Dispose();
+        base.Dispose(disposing);
     }
 
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
@@ -38,11 +46,6 @@ public class BlurRendererFeature : ScriptableRendererFeature
     public float GetBlurStrength()
     {
         return settings.blurStrength;
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        blurPass?.Dispose();
     }
 
     // ---------------------------------------------------------------

@@ -178,7 +178,7 @@ public class BornSceneSequenceManager : MonoBehaviour
         if (animator != null)
         {
             animator.applyRootMotion = false;
-            animator.SetTrigger("SitDown");
+            animator.SetTrigger("SitDown_Sleep");
         }
 
         // --- Pre-compute target positions/rotations for each phase ---

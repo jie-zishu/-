@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using StarterAssets;
@@ -11,7 +12,10 @@ public class PianoGameManager : MonoBehaviour
     [SerializeField] private GameObject closeButton;
 
     [Header("Test")]
-    [SerializeField] private bool autoOpenOnStart = true;
+    [SerializeField] private bool autoOpenOnStart = false;
+
+    [Header("Events")]
+    public UnityEvent onPianoClosed;
 
     [Header("Blur")]
     [SerializeField] private float maxBlurStrength = 2.5f;
@@ -90,10 +94,43 @@ public class PianoGameManager : MonoBehaviour
         if (isPianoOpen) return;
         isPianoOpen = true;
 
-        // Show UI
-        if (pianoUI != null) pianoUI.SetActive(true);
+        DisablePlayerInput();
+        ShowCursor();
 
-        // Disable player
+        if (pianoUI != null) pianoUI.SetActive(true);
+        SetBlur(maxBlurStrength);
+    }
+
+    public void FadeInPianoUI()
+    {
+        if (isPianoOpen) return;
+        isPianoOpen = true;
+
+        DisablePlayerInput();
+        ShowCursor();
+
+        StartCoroutine(FadeInRoutine());
+    }
+
+    private IEnumerator FadeInRoutine()
+    {
+        // Fade blur from 0 → maxBlurStrength over 0.5s
+        float elapsed = 0f;
+        while (elapsed < blurTransitionDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / blurTransitionDuration;
+            SetBlur(Mathf.Lerp(0f, maxBlurStrength, 1f - (1f - t) * (1f - t)));
+            yield return null;
+        }
+        SetBlur(maxBlurStrength);
+
+        // Show piano UI after blur
+        if (pianoUI != null) pianoUI.SetActive(true);
+    }
+
+    private void DisablePlayerInput()
+    {
         if (playerController != null) playerController.enabled = false;
         if (playerInputs != null)
         {
@@ -103,13 +140,12 @@ public class PianoGameManager : MonoBehaviour
             playerInputs.cursorInputForLook = false;
         }
         if (playerInputComp != null) playerInputComp.enabled = false;
+    }
 
-        // Show cursor
+    private void ShowCursor()
+    {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
-        // Enable blur
-        SetBlur(maxBlurStrength);
     }
 
     public void ClosePiano()
@@ -140,6 +176,8 @@ public class PianoGameManager : MonoBehaviour
         // Hide cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        onPianoClosed?.Invoke();
     }
 
     private void SetBlur(float value)

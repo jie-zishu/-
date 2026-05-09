@@ -30,6 +30,15 @@ public class SceneIntroDialogueController : MonoBehaviour
 
     public bool IsDialogueActive() { return dialogueActive; }
 
+    public bool HasConfiguredLines()
+    {
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        var config = FindConfig(sceneName);
+        if (config != null && config.lines.Count > 0) return true;
+        if (defaultLines.Count > 0) return true;
+        return false;
+    }
+
     [Header("Dialogue Panel Style")]
     [SerializeField] private float panelHeight = 180f;
     [SerializeField] private float panelBottomMargin = 24f;
@@ -184,7 +193,7 @@ public class SceneIntroDialogueController : MonoBehaviour
         }
     }
 
-    private void StartDialogue(List<string> lines)
+    public void StartDialogue(List<string> lines)
     {
         if (lines == null || lines.Count == 0)
         {
