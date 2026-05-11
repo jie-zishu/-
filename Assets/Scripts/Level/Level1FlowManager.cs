@@ -51,6 +51,7 @@ public class Level1FlowManager : MonoBehaviour
 
     [Header("Piano UI")]
     [SerializeField] private PianoGameManager pianoGameManager;
+    [SerializeField] private PianoGamePlay pianoGamePlay;
 
     private enum Phase
     {
@@ -345,8 +346,8 @@ public class Level1FlowManager : MonoBehaviour
         if (goToPianoUI != null) goToPianoUI.SetActive(false);
         waitingForF = false;
 
-        // Save return position before teleporting
-        returnPosition = player.transform.position;
+        // Save return position (Area_star_ellow's position)
+        returnPosition = performanceTrigger != null ? performanceTrigger.transform.position : player.transform.position;
 
         // Disable player controls
         if (tpc != null) tpc.enabled = false;
@@ -387,12 +388,26 @@ public class Level1FlowManager : MonoBehaviour
         // Phase 2: fade in blur + piano UI over 0.5s
         if (pianoGameManager != null)
             pianoGameManager.FadeInPianoUI();
-        else
-            yield return new WaitForSeconds(0.5f);
+
+        // Wait for fade+UI to fully appear before starting the game
+        yield return new WaitForSeconds(0.6f);
+
+        // Phase 3: start the piano game
+        if (pianoGamePlay != null)
+            pianoGamePlay.StartGame();
+    }
+
+    private void OnPerformanceComplete()
+    {
+        Debug.Log("[Level1] Performance complete!");
+        // Future: trigger next scene, play fanfare, etc.
     }
 
     private void OnPianoClosed()
     {
+        // Stop the piano game
+        if (pianoGamePlay != null) pianoGamePlay.StopGame();
+
         // Restore standing animation
         if (animator != null)
             animator.CrossFade("Idle Walk Run Blend", 0.3f);
@@ -627,9 +642,13 @@ public class Level1FlowManager : MonoBehaviour
         if (go == null) return;
 
         var col = go.GetComponent<SphereCollider>();
-        if (col == null) col = go.AddComponent<SphereCollider>();
+        if (col == null)
+        {
+            col = go.AddComponent<SphereCollider>();
+            col.radius = radius;
+        }
         col.isTrigger = true;
-        col.radius = radius / go.transform.lossyScale.x; // Inspector value, scale-compensated
+        // Respect Editor-set radius — never override
 
         if (td == null) td = go.GetComponent<TriggerDetector>();
         if (td == null) td = go.AddComponent<TriggerDetector>();
@@ -672,6 +691,13 @@ public class Level1FlowManager : MonoBehaviour
             var pm = GameObject.Find("PianoGameManager");
             if (pm != null) pianoGameManager = pm.GetComponent<PianoGameManager>();
         }
+        if (pianoGamePlay == null)
+        {
+            var pg = GameObject.Find("PianoGameManager");
+            if (pg != null) pianoGamePlay = pg.GetComponent<PianoGamePlay>();
+        }
+        if (pianoGamePlay != null)
+            pianoGamePlay.onSequenceComplete.AddListener(OnPerformanceComplete);
     }
 
     private void SetupExistingBillboards()

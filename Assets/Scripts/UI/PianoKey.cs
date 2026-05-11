@@ -1,11 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class PianoKey : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private AudioClip clip;
+
+    public UnityEvent onKeyPressed;
 
     private AudioSource audioSource;
 
@@ -14,6 +17,14 @@ public class PianoKey : MonoBehaviour, IPointerClickHandler
         audioSource = GetComponent<AudioSource>();
         audioSource.playOnAwake = false;
         if (clip != null) audioSource.clip = clip;
+
+        // Disable raycast on child Text elements so they don't steal clicks from adjacent keys
+        var texts = GetComponentsInChildren<Text>();
+        foreach (var t in texts) t.raycastTarget = false;
+
+        // Ensure the Image on this key catches clicks
+        var img = GetComponent<Image>();
+        if (img != null) img.raycastTarget = true;
     }
 
     public void PlayNote()
@@ -25,5 +36,6 @@ public class PianoKey : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         PlayNote();
+        onKeyPressed?.Invoke();
     }
 }

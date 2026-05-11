@@ -57,16 +57,17 @@ public class BlurRendererFeature : ScriptableRendererFeature
         private float blurStrength;
         private int blurIterations;
 
-        private RTHandle cameraColorTarget;
-        private RTHandle tempRT0;
-        private RTHandle tempRT1;
-
         private static readonly int BlurSizeId = Shader.PropertyToID("_BlurSize");
+        private static readonly int TempRT0Id = Shader.PropertyToID("_TempRT0");
+        private static readonly int TempRT1Id = Shader.PropertyToID("_TempRT1");
+        private static readonly int MainTexId = Shader.PropertyToID("_MainTex");
 
         public BlurRenderPass(BlurSettings settings)
         {
             this.renderPassEvent = settings.renderPassEvent;
             blurMaterial = CoreUtils.CreateEngineMaterial(Shader.Find("Hidden/GaussianBlur"));
+            if (blurMaterial == null)
+                Debug.LogError("[GaussianBlur] Shader 'Hidden/GaussianBlur' not found!");
         }
 
         public void Setup(float strength, int iterations)
@@ -77,7 +78,11 @@ public class BlurRendererFeature : ScriptableRendererFeature
 
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
         {
-            cameraColorTarget = renderingData.cameraData.renderer.cameraColorTargetHandle;
+            // Use classic cmd.GetTemporaryRT — reliable across URP versions
+            var desc = renderingData.cameraData.cameraTargetDescriptor;
+            desc.depthBufferBits = 0;
+            cmd.GetTemporaryRT(TempRT0Id, desc);
+            cmd.GetTemporaryRT(TempRT1Id, desc);
         }
 
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
@@ -85,38 +90,36 @@ public class BlurRendererFeature : ScriptableRendererFeature
             if (blurMaterial == null) return;
 
             CommandBuffer cmd = CommandBufferPool.Get("GaussianBlur");
-            var desc = renderingData.cameraData.cameraTargetDescriptor;
-            desc.depthBufferBits = 0;
 
-            RenderingUtils.ReAllocateIfNeeded(ref tempRT0, desc, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_TempRT0");
-            RenderingUtils.ReAllocateIfNeeded(ref tempRT1, desc, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_TempRT1");
+            // Copy camera target → tempRT0 (cast RTHandle to RenderTargetIdentifier)
+            var source = renderingData.cameraData.renderer.cameraColorTargetHandle;
+            cmd.Blit((RenderTargetIdentifier)source, TempRT0Id);
 
-            // First blit: camera → tempRT0
-            Blitter.BlitCameraTexture(cmd, cameraColorTarget, tempRT0);
-
+            // Blur passes (cmd.Blit auto-binds source as _MainTex)
             for (int i = 0; i < blurIterations; i++)
             {
                 float stepSize = blurStrength * (1f + i * 0.5f);
                 cmd.SetGlobalFloat(BlurSizeId, stepSize);
 
-                // Horizontal: tempRT0 → tempRT1
-                Blitter.BlitCameraTexture(cmd, tempRT0, tempRT1, blurMaterial, 0);
-
-                // Vertical: tempRT1 → tempRT0
-                Blitter.BlitCameraTexture(cmd, tempRT1, tempRT0, blurMaterial, 1);
+                cmd.Blit(TempRT0Id, TempRT1Id, blurMaterial, 0); // Horizontal
+                cmd.Blit(TempRT1Id, TempRT0Id, blurMaterial, 1); // Vertical
             }
 
-            // Final blit: tempRT0 → camera target
-            Blitter.BlitCameraTexture(cmd, tempRT0, cameraColorTarget);
+            // Final: RT0 → camera target
+            cmd.Blit(TempRT0Id, source);
 
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }
 
+        public override void OnCameraCleanup(CommandBuffer cmd)
+        {
+            cmd.ReleaseTemporaryRT(TempRT0Id);
+            cmd.ReleaseTemporaryRT(TempRT1Id);
+        }
+
         public void Dispose()
         {
-            tempRT0?.Release();
-            tempRT1?.Release();
             CoreUtils.Destroy(blurMaterial);
         }
     }
