@@ -35,6 +35,13 @@ public class SceneIntroDialogueController : MonoBehaviour
 
     public bool IsDialogueActive() { return dialogueActive; }
 
+    public void StartDialogueForCurrentScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        List<string> lines = ResolveLines(sceneName);
+        if (lines.Count > 0) StartDialogue(lines);
+    }
+
     public bool HasConfiguredLines()
     {
         string sceneName = SceneManager.GetActiveScene().name;

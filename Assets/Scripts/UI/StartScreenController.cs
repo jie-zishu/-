@@ -26,6 +26,10 @@ public class StartScreenController : MonoBehaviour
 
     private void Start()
     {
+        // Ensure cursor is usable on StartScreen
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         // Main menu buttons
         if (startGameButton != null)
             startGameButton.onClick.AddListener(OnStartGame);
@@ -39,7 +43,6 @@ public class StartScreenController : MonoBehaviour
         if (backWardsButton != null)
             backWardsButton.onClick.AddListener(GoBack);
 
-        // Settings toggle — overlay, doesn't affect other panels
         if (settingWordsButton != null)
             settingWordsButton.onClick.AddListener(ToggleSettings);
 
@@ -54,6 +57,12 @@ public class StartScreenController : MonoBehaviour
             deleteSettingButton.onClick.AddListener(CloseSettings);
 
         SwitchTo(PanelState.MainMenu);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            ToggleSettings();
     }
 
     private void OnStartGame()

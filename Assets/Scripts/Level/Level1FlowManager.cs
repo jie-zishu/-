@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 using StarterAssets;
 
 public class Level1FlowManager : MonoBehaviour
@@ -21,6 +22,12 @@ public class Level1FlowManager : MonoBehaviour
     [Header("Cube Interactions")]
     [SerializeField] private TriggerDetector[] cubeTriggers;
     [SerializeField] private GameObject[] cubeBillboards;
+
+    [Header("MP3 Easter Egg")]
+    [SerializeField] private GameObject mp3Effect;
+    [SerializeField] private GameObject mp3Billboard;
+    [SerializeField] private TriggerDetector mp3Trigger;
+    [SerializeField] private string[] mp3Dialogues = new string[] { "一台老旧的MP3，还在播放着很久以前的歌..." };
 
     [Header("Performance Area")]
     [SerializeField] private GameObject performanceBillboard;
@@ -49,6 +56,23 @@ public class Level1FlowManager : MonoBehaviour
     [SerializeField] private float cubeTriggerRadius = 1.2f;
     [SerializeField] private float performanceTriggerRadius = 2f;
 
+    [Header("Bench Reading")]
+    [SerializeField] private GameObject benchSparkleEffect;
+    [SerializeField] private GameObject readTextUI;
+    [SerializeField] private GameObject exitReadUI;
+    [SerializeField] private GameObject readBillboard;
+    [SerializeField] private TriggerDetector benchReadTrigger;
+    [SerializeField] private Transform allTextBench;
+    [SerializeField] private Transform allTextPiano;
+    [SerializeField] private CinemachineVirtualCamera readingVCam;
+    [SerializeField] private string[] benchReadingEndDialogues = new string[] {
+        "原来是这份乐谱...",
+        "把它带到钢琴那边去吧。"
+    };
+
+    [Header("Ending")]
+    [SerializeField] private Level1EndingDirector endingDirector;
+
     [Header("Piano UI")]
     [SerializeField] private PianoGameManager pianoGameManager;
     [SerializeField] private PianoGamePlay pianoGamePlay;
@@ -59,6 +83,9 @@ public class Level1FlowManager : MonoBehaviour
         ApproachPiano,
         PianoDialogue,
         Exploration,
+        AllCubesFoundDialogue,
+        ApproachBenchReading,
+        Reading,
         ApproachPerformance,
         Performance
     }
@@ -74,6 +101,8 @@ public class Level1FlowManager : MonoBehaviour
     private CharacterController cc;
     private Animator animator;
     private Vector3 returnPosition;
+    private Vector2 lastMousePos;
+    private bool isDragging;
 
     private void Awake()
     {
@@ -113,8 +142,10 @@ public class Level1FlowManager : MonoBehaviour
 
     private IEnumerator WaitThenStartDialogue()
     {
-        yield return null; // Wait one frame for dialogue to auto-start
-        // Dialogue auto-starts via SceneIntroDialogueController
+        yield return null;
+        // Explicitly start dialogue (don't rely on autoStart)
+        if (dialogueController != null && dialogueController.HasConfiguredLines())
+            dialogueController.StartDialogueForCurrentScene();
     }
 
     private void CachePlayerComponents()
@@ -132,6 +163,8 @@ public class Level1FlowManager : MonoBehaviour
             cc = player.GetComponentInChildren<CharacterController>();
             animator = player.GetComponentInChildren<Animator>();
         }
+        // Lock camera during dialogue to prevent spin artifact
+        if (tpc != null) tpc.LockCameraPosition = true;
     }
 
     // ===== PHASE TRANSITIONS =====
@@ -140,7 +173,26 @@ public class Level1FlowManager : MonoBehaviour
     {
         dialogueController.onDialogueEnd.RemoveListener(OnInitialDialogueEnd);
         currentPhase = Phase.ApproachPiano;
+
+        // Unlock camera now that dialogue is done
+        if (tpc != null) tpc.LockCameraPosition = false;
+
         ShowPianoGuide();
+    }
+
+    private System.Collections.IEnumerator ResetCameraNextFrame()
+    {
+        yield return null;
+        // Reset TPC internal camera angles only — do NOT touch vcam.transform
+        // (Cinemachine Follow mode drives the transform; manual changes cause conflicts)
+        if (tpc != null)
+        {
+            var tpcType = tpc.GetType();
+            var yawField = tpcType.GetField("_cinemachineTargetYaw", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            var pitchField = tpcType.GetField("_cinemachineTargetPitch", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            if (yawField != null) yawField.SetValue(tpc, player.transform.eulerAngles.y);
+            if (pitchField != null) pitchField.SetValue(tpc, 10f);
+        }
     }
 
     private void ShowPianoGuide()
@@ -204,12 +256,10 @@ public class Level1FlowManager : MonoBehaviour
         if (explorationCounterUI != null) explorationCounterUI.SetActive(true);
         UpdateCounterText();
 
-        // Show all cube effects
+        // Show all cube effects + MP3 easter egg
         if (cubeEffects != null)
-        {
-            foreach (var fx in cubeEffects)
-                if (fx != null) fx.SetActive(true);
-        }
+            foreach (var fx in cubeEffects) if (fx != null) fx.SetActive(true);
+        if (mp3Effect != null) mp3Effect.SetActive(true);
 
         // Enable all cube triggers
         for (int i = 0; i < cubeTriggers.Length; i++)
@@ -219,6 +269,9 @@ public class Level1FlowManager : MonoBehaviour
                 (go) => OnCubeTriggerEnter(index, go),
                 (go) => OnCubeTriggerExit(index, go));
         }
+
+        // Enable MP3 easter egg trigger
+        EnableTrigger(mp3Trigger, OnMP3TriggerEnter, OnMP3TriggerExit);
     }
 
     private void OnCubeTriggerEnter(int index, GameObject obj)
@@ -228,6 +281,21 @@ public class Level1FlowManager : MonoBehaviour
             cubeBillboards[index].SetActive(true);
         activeTrigger = cubeTriggers[index];
         waitingForF = true;
+    }
+
+    private void OnMP3TriggerEnter(GameObject obj)
+    {
+        if (currentPhase != Phase.Exploration) return;
+        if (mp3Billboard != null) mp3Billboard.SetActive(true);
+        activeTrigger = mp3Trigger;
+        waitingForF = true;
+    }
+
+    private void OnMP3TriggerExit(GameObject obj)
+    {
+        if (mp3Billboard != null) mp3Billboard.SetActive(false);
+        waitingForF = false;
+        activeTrigger = null;
     }
 
     private void OnCubeTriggerExit(int index, GameObject obj)
@@ -243,7 +311,9 @@ public class Level1FlowManager : MonoBehaviour
         waitingForF = false;
         activeTrigger = null;
 
-        // Hide this cube's effect and trigger
+        // Hide the cube itself, its effect, and billboard
+        if (cubeTriggers != null && index < cubeTriggers.Length && cubeTriggers[index] != null)
+            cubeTriggers[index].gameObject.SetActive(false);
         if (cubeEffects != null && index < cubeEffects.Length && cubeEffects[index] != null)
             cubeEffects[index].SetActive(false);
         if (cubeBillboards != null && index < cubeBillboards.Length && cubeBillboards[index] != null)
@@ -282,7 +352,7 @@ public class Level1FlowManager : MonoBehaviour
     private void UpdateCounterText()
     {
         if (counterText != null)
-            counterText.text = "根据指引探索，找到过去的碎片 " + cubesFound + "/4";
+            counterText.text = "找到过去的碎片 " + cubesFound + "/4";
     }
 
     private void AllCubesFound()
@@ -310,19 +380,134 @@ public class Level1FlowManager : MonoBehaviour
     {
         dialogueController.onDialogueEnd.RemoveListener(OnAllCubesDialogueEnd);
 
-        currentPhase = Phase.ApproachPerformance;
+        currentPhase = Phase.ApproachBenchReading;
 
-        // Show performance area effect
-        if (areaStarEffect != null) areaStarEffect.SetActive(true);
+        // Show bench reading guide
+        if (benchSparkleEffect != null) benchSparkleEffect.SetActive(true);
+        if (readTextUI != null) readTextUI.SetActive(true);
 
-        // Show "go to piano" hint
-        if (goToPianoUI != null) goToPianoUI.SetActive(true);
-
-        // Enable performance trigger
-        EnableTrigger(performanceTrigger, OnPerformanceTriggerEnter, OnPerformanceTriggerExit);
+        // Enable bench read trigger
+        EnableTrigger(benchReadTrigger, OnBenchReadTriggerEnter, OnBenchReadTriggerExit);
     }
 
     // ===== PERFORMANCE PHASE =====
+
+    // ===== BENCH READING PHASE =====
+
+    private void OnBenchReadTriggerEnter(GameObject obj)
+    {
+        if (currentPhase != Phase.ApproachBenchReading) return;
+        if (readBillboard != null) readBillboard.SetActive(true);
+        activeTrigger = benchReadTrigger;
+        waitingForF = true;
+    }
+
+    private void OnBenchReadTriggerExit(GameObject obj)
+    {
+        if (readBillboard != null) readBillboard.SetActive(false);
+        waitingForF = false;
+        activeTrigger = null;
+    }
+
+    private void EnterReadingMode()
+    {
+        waitingForF = false;
+        currentPhase = Phase.Reading;
+
+        if (readBillboard != null) readBillboard.SetActive(false);
+        if (readTextUI != null) readTextUI.SetActive(false);
+        if (exitReadUI != null) exitReadUI.SetActive(true);
+        if (benchSparkleEffect != null) benchSparkleEffect.SetActive(false);
+
+        // Raise All_Text_bench
+        if (allTextBench != null)
+            allTextBench.position += Vector3.up * 0.2f;
+
+        // Switch to reading camera
+        if (readingVCam != null)
+            readingVCam.Priority = 20;
+        var playerVCam = GameObject.Find("Virtual Camera")?.GetComponent<CinemachineVirtualCamera>();
+        if (playerVCam != null) playerVCam.Priority = 0;
+
+        // Disable player control
+        if (tpc != null) tpc.enabled = false;
+        if (inputs != null) { inputs.cursorLocked = false; inputs.cursorInputForLook = false; }
+        if (playerInput != null) playerInput.enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void ExitReadingMode()
+    {
+        // Switch camera back to player
+        if (readingVCam != null) readingVCam.Priority = 0;
+        var playerVCam = GameObject.Find("Virtual Camera")?.GetComponent<CinemachineVirtualCamera>();
+        if (playerVCam != null) playerVCam.Priority = 20;
+
+        if (exitReadUI != null) exitReadUI.SetActive(false);
+
+        // Swap objects: hide bench text, show piano version
+        if (allTextBench != null) allTextBench.gameObject.SetActive(false);
+        if (allTextPiano != null) allTextPiano.gameObject.SetActive(true);
+
+        // Restore player
+        if (tpc != null) tpc.enabled = true;
+        if (inputs != null) { inputs.cursorLocked = true; inputs.cursorInputForLook = true; }
+        if (playerInput != null) playerInput.enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Dialogue before continuing to performance
+        if (dialogueController != null && benchReadingEndDialogues != null && benchReadingEndDialogues.Length > 0)
+        {
+            dialogueController.onDialogueEnd.AddListener(OnBenchReadingEndDialogueDone);
+            dialogueController.StartDialogue(new System.Collections.Generic.List<string>(benchReadingEndDialogues));
+        }
+        else
+        {
+            OnBenchReadingEndDialogueDone();
+        }
+    }
+
+    private void OnBenchReadingEndDialogueDone()
+    {
+        dialogueController.onDialogueEnd.RemoveListener(OnBenchReadingEndDialogueDone);
+
+        currentPhase = Phase.ApproachPerformance;
+        if (areaStarEffect != null) areaStarEffect.SetActive(true);
+        if (goToPianoUI != null) goToPianoUI.SetActive(true);
+        EnableTrigger(performanceTrigger, OnPerformanceTriggerEnter, OnPerformanceTriggerExit);
+    }
+
+    private void HandleReadingUpdate()
+    {
+        // F to exit reading mode
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ExitReadingMode();
+            return;
+        }
+
+        // Mouse drag to rotate All_Text_bench
+        if (allTextBench == null) return;
+        var cam = Camera.main;
+        if (cam == null) return;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            isDragging = true;
+            lastMousePos = Input.mousePosition;
+        }
+        if (Input.GetMouseButtonUp(0)) isDragging = false;
+
+        if (isDragging)
+        {
+            Vector2 delta = (Vector2)Input.mousePosition - lastMousePos;
+            lastMousePos = Input.mousePosition;
+            allTextBench.Rotate(cam.transform.up, delta.x * 0.3f, Space.World);
+            allTextBench.Rotate(cam.transform.right, -delta.y * 0.3f, Space.World);
+        }
+    }
 
     private void OnPerformanceTriggerEnter(GameObject obj)
     {
@@ -344,6 +529,7 @@ public class Level1FlowManager : MonoBehaviour
         currentPhase = Phase.Performance;
         performanceBillboard.SetActive(false);
         if (goToPianoUI != null) goToPianoUI.SetActive(false);
+        if (areaStarEffect != null) areaStarEffect.SetActive(false);
         waitingForF = false;
 
         // Save return position (Area_star_ellow's position)
@@ -400,7 +586,22 @@ public class Level1FlowManager : MonoBehaviour
     private void OnPerformanceComplete()
     {
         Debug.Log("[Level1] Performance complete!");
-        // Future: trigger next scene, play fanfare, etc.
+    }
+
+    private void OnFinishClicked()
+    {
+        // Close piano UI and restore player first
+        if (pianoGameManager != null)
+            pianoGameManager.ClosePiano();
+        StartCoroutine(EndingSequence());
+    }
+
+    private System.Collections.IEnumerator EndingSequence()
+    {
+        yield return new WaitForSeconds(0.5f); // Wait for piano close to complete
+        yield return new WaitForSeconds(3f);
+        if (endingDirector != null)
+            endingDirector.PlayEnding();
     }
 
     private void OnPianoClosed()
@@ -438,6 +639,12 @@ public class Level1FlowManager : MonoBehaviour
 
     private void Update()
     {
+        if (currentPhase == Phase.Reading)
+        {
+            HandleReadingUpdate();
+            return;
+        }
+
         if (waitingForF && Input.GetKeyDown(KeyCode.F))
         {
             HandleFInteraction();
@@ -450,8 +657,18 @@ public class Level1FlowManager : MonoBehaviour
         {
             PianoInteracted();
         }
+        else if (currentPhase == Phase.ApproachBenchReading)
+        {
+            EnterReadingMode();
+        }
         else if (currentPhase == Phase.Exploration)
         {
+            // MP3 easter egg (not counted in cubes)
+            if (activeTrigger == mp3Trigger)
+            {
+                MP3Interacted();
+                return;
+            }
             // Find which cube trigger is active
             for (int i = 0; i < cubeTriggers.Length; i++)
             {
@@ -468,12 +685,26 @@ public class Level1FlowManager : MonoBehaviour
         }
     }
 
+    private void MP3Interacted()
+    {
+        waitingForF = false;
+        activeTrigger = null;
+        if (mp3Effect != null) mp3Effect.SetActive(false);
+        if (mp3Billboard != null) mp3Billboard.SetActive(false);
+        DisableTrigger(mp3Trigger);
+
+        if (dialogueController != null && mp3Dialogues != null && mp3Dialogues.Length > 0)
+            dialogueController.StartDialogue(new System.Collections.Generic.List<string>(mp3Dialogues));
+    }
+
     // ===== HELPERS =====
 
     private void HideAllEffects()
     {
         if (pianoShineEffect != null) pianoShineEffect.SetActive(false);
         if (areaStarEffect != null) areaStarEffect.SetActive(false);
+        if (mp3Effect != null) mp3Effect.SetActive(false);
+        if (benchSparkleEffect != null) benchSparkleEffect.SetActive(false);
         if (cubeEffects != null)
             foreach (var fx in cubeEffects) if (fx != null) fx.SetActive(false);
     }
@@ -482,6 +713,8 @@ public class Level1FlowManager : MonoBehaviour
     {
         if (pianoBillboard != null) pianoBillboard.SetActive(false);
         if (performanceBillboard != null) performanceBillboard.SetActive(false);
+        if (mp3Billboard != null) mp3Billboard.SetActive(false);
+        if (readBillboard != null) readBillboard.SetActive(false);
         if (cubeBillboards != null)
             foreach (var b in cubeBillboards) if (b != null) b.SetActive(false);
     }
@@ -506,6 +739,7 @@ public class Level1FlowManager : MonoBehaviour
     private void DisableAllTriggers()
     {
         DisableTrigger(pianoTrigger);
+        DisableTrigger(mp3Trigger);
         if (cubeTriggers != null)
             foreach (var t in cubeTriggers) DisableTrigger(t);
         DisableTrigger(performanceTrigger);
@@ -515,6 +749,10 @@ public class Level1FlowManager : MonoBehaviour
 
     private void AutoCreateBillboards()
     {
+        // Bench reading billboard
+        if (readBillboard == null)
+            readBillboard = GameObject.Find("ReadBillboard_0") ?? CreateRuntimeBillboard("ReadBillboard_0", "按下f阅读", new Vector3(0, 1.5f, 0));
+
         // Find existing scene objects first; only create if missing
         if (pianoBillboard == null)
         {
@@ -625,6 +863,8 @@ public class Level1FlowManager : MonoBehaviour
     {
         CreateTriggerIfNeeded("SceneObject/Piano", pianoTriggerRadius, ref pianoTrigger);
         CreateTriggerIfNeeded("Area_star_ellow", performanceTriggerRadius, ref performanceTrigger);
+        CreateTriggerIfNeeded("MP3", cubeTriggerRadius, ref mp3Trigger);
+        CreateTriggerIfNeeded("Bench_Piano", cubeTriggerRadius, ref benchReadTrigger);
 
         if (cubeTriggers == null || cubeTriggers.Length < 4 || cubeTriggers[0] == null)
         {
@@ -686,6 +926,11 @@ public class Level1FlowManager : MonoBehaviour
             cubeEffects[3] = SafeFind("ObjectToFind/Cube4/Sparkle_ellow");
         }
 
+        if (mp3Effect == null)
+            mp3Effect = GameObject.Find("ForMP3/MP3/Sparkle_ellow");
+        if (mp3Billboard == null)
+            mp3Billboard = GameObject.Find("MP3Billboard") ?? CreateRuntimeBillboard("MP3Billboard", "按下f查看", new Vector3(-0.46f, 2f, 0.78f));
+
         if (pianoGameManager == null)
         {
             var pm = GameObject.Find("PianoGameManager");
@@ -697,7 +942,39 @@ public class Level1FlowManager : MonoBehaviour
             if (pg != null) pianoGamePlay = pg.GetComponent<PianoGamePlay>();
         }
         if (pianoGamePlay != null)
+        {
             pianoGamePlay.onSequenceComplete.AddListener(OnPerformanceComplete);
+            pianoGamePlay.onFinishClicked.AddListener(OnFinishClicked);
+        }
+        if (endingDirector == null)
+        {
+            var edGo = GameObject.Find("Level1EndingDirector");
+            if (edGo != null) endingDirector = edGo.GetComponent<Level1EndingDirector>();
+        }
+
+        // Bench reading UI
+        if (readTextUI == null) readTextUI = CreateSideTextUI("ReadText", "阅读", -20);
+        if (exitReadUI == null) exitReadUI = CreateSideTextUI("ExitRead", "按F退出阅读", -20);
+
+        // Bench reading
+        if (benchSparkleEffect == null)
+            benchSparkleEffect = GameObject.Find("Bench_Piano/Sparkle_ellow");
+        if (allTextBench == null)
+        {
+            var atb = GameObject.Find("Bench_Piano/All_Text_bench");
+            if (atb != null) allTextBench = atb.transform;
+        }
+        if (allTextPiano == null)
+        {
+            var atp = GameObject.Find("Bench_Piano/All_Text_Piano");
+            if (atp != null) allTextPiano = atp.transform;
+            if (allTextPiano != null) allTextPiano.gameObject.SetActive(false);
+        }
+        if (readingVCam == null)
+        {
+            var rv = GameObject.Find("All_Text_bench Virtual Camera");
+            if (rv != null) readingVCam = rv.GetComponent<CinemachineVirtualCamera>();
+        }
     }
 
     private void SetupExistingBillboards()
@@ -712,6 +989,24 @@ public class Level1FlowManager : MonoBehaviour
         Config(performanceBillboard);
         if (cubeBillboards != null)
             foreach (var b in cubeBillboards) Config(b);
+    }
+
+    private GameObject CreateSideTextUI(string name, string text, float yOffset)
+    {
+        var canvasGo = GameObject.Find("Canvas");
+        if (canvasGo == null) return null;
+        var go = new GameObject(name);
+        go.transform.SetParent(canvasGo.transform, false);
+        var rt = go.AddComponent<RectTransform>();
+        rt.anchorMin = new Vector2(0, 0.5f); rt.anchorMax = new Vector2(0, 0.5f);
+        rt.pivot = new Vector2(0, 0.5f); rt.anchoredPosition = new Vector2(30, yOffset);
+        rt.sizeDelta = new Vector2(300, 40);
+        var txt = go.AddComponent<Text>();
+        txt.text = text; txt.fontSize = 22; txt.color = Color.white;
+        txt.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        txt.alignment = TextAnchor.MiddleLeft;
+        go.SetActive(false);
+        return go;
     }
 
     private GameObject SafeFind(string path)

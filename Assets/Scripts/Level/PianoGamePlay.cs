@@ -14,12 +14,16 @@ public class PianoGamePlay : MonoBehaviour
     [SerializeField] private PianoKey[] pianoKeys; // 10 keys, ordered
 
     [Header("UI")]
-    [SerializeField] private Text progressText; // assign from Editor, or auto-created at runtime
+    [SerializeField] private Text progressText;
+    [SerializeField] private GameObject scoreImage;
+    [SerializeField] private Button finishButton;
+    [SerializeField] private Button jumpButton;
 
     [Header("Events")]
     public UnityEvent onSequenceComplete;
     public UnityEvent onNoteCorrect;
     public UnityEvent onNoteWrong;
+    public UnityEvent onFinishClicked;
 
     private int currentIndex;
     private bool isActive;
@@ -35,6 +39,44 @@ public class PianoGamePlay : MonoBehaviour
     {
         if (progressText == null)
             CreateProgressText();
+    }
+
+    private void AutoFindUI()
+    {
+        var pianoUI = GameObject.Find("InterationPianoGameUI");
+        if (pianoUI == null) return;
+
+        if (scoreImage == null)
+        {
+            var si = pianoUI.transform.Find("曲谱Image");
+            if (si != null) scoreImage = si.gameObject;
+        }
+        if (finishButton == null)
+        {
+            var fb = pianoUI.transform.Find("Finish");
+            if (fb != null) finishButton = fb.GetComponent<Button>();
+        }
+        if (jumpButton == null)
+        {
+            var jb = pianoUI.transform.Find("Jump");
+            if (jb != null) jumpButton = jb.GetComponent<Button>();
+        }
+        if (jumpButton != null)
+        {
+            jumpButton.onClick.RemoveAllListeners();
+            jumpButton.onClick.AddListener(SkipToComplete);
+        }
+    }
+
+    public void SkipToComplete()
+    {
+        currentIndex = noteSequence.Count;
+        isActive = false;
+        ClearHighlight();
+        UpdateProgressUI();
+        if (scoreImage != null) scoreImage.SetActive(false);
+        if (finishButton != null) finishButton.gameObject.SetActive(true);
+        onSequenceComplete?.Invoke();
     }
 
     private void EnsureKeysWired()
@@ -91,9 +133,13 @@ public class PianoGamePlay : MonoBehaviour
 
     public void StartGame()
     {
+        AutoFindUI();
         EnsureKeysWired();
         currentIndex = 0;
         isActive = true;
+        // Reset UI to playing state
+        if (scoreImage != null) scoreImage.SetActive(true);
+        if (finishButton != null) { finishButton.gameObject.SetActive(false); finishButton.onClick.RemoveAllListeners(); finishButton.onClick.AddListener(() => onFinishClicked?.Invoke()); }
         UpdateProgressUI();
         HighlightNextKey();
     }
@@ -122,6 +168,11 @@ public class PianoGamePlay : MonoBehaviour
                 isActive = false;
                 ClearHighlight();
                 UpdateProgressUI();
+
+                // Show finish UI — hide score, show finish button
+                if (scoreImage != null) scoreImage.SetActive(false);
+                if (finishButton != null) finishButton.gameObject.SetActive(true);
+
                 onSequenceComplete?.Invoke();
             }
             else
