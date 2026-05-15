@@ -159,7 +159,7 @@ public class PianoGamePlay : MonoBehaviour
 
         if (keyIndex == expected)
         {
-            // Correct!
+            // 弹正确
             currentIndex++;
             onNoteCorrect?.Invoke();
 
@@ -169,7 +169,6 @@ public class PianoGamePlay : MonoBehaviour
                 ClearHighlight();
                 UpdateProgressUI();
 
-                // Show finish UI — hide score, show finish button
                 if (scoreImage != null) scoreImage.SetActive(false);
                 if (finishButton != null) finishButton.gameObject.SetActive(true);
 
@@ -183,7 +182,7 @@ public class PianoGamePlay : MonoBehaviour
         }
         else
         {
-            // Wrong key
+            // 错键
             onNoteWrong?.Invoke();
             FlashWrongKey(keyIndex);
         }

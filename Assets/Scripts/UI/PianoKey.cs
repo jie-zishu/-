@@ -18,11 +18,9 @@ public class PianoKey : MonoBehaviour, IPointerClickHandler
         audioSource.playOnAwake = false;
         if (clip != null) audioSource.clip = clip;
 
-        // Disable raycast on child Text elements so they don't steal clicks from adjacent keys
         var texts = GetComponentsInChildren<Text>();
         foreach (var t in texts) t.raycastTarget = false;
 
-        // Ensure the Image on this key catches clicks
         var img = GetComponent<Image>();
         if (img != null) img.raycastTarget = true;
     }

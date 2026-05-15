@@ -21,6 +21,11 @@ public class CassetteInteraction : MonoBehaviour
     [SerializeField] private float stripWidth = 0.015f;
     [SerializeField] private Color stripColor = new Color(0.35f, 0.2f, 0.1f);
 
+    [Header("Winding (回卷)")]
+    [SerializeField] private UnityEngine.UI.Slider windingSlider;
+    [SerializeField] private GameObject windingSliderUI;
+    public UnityEngine.Events.UnityEvent onWindingComplete;
+
     [Header("Interaction Prompt")]
     [SerializeField] private GameObject interactPromptUI;
 
@@ -34,6 +39,10 @@ public class CassetteInteraction : MonoBehaviour
     // Mouse drag
     private bool isDragging;
     private Vector2 lastMousePos;
+
+    // Winding state
+    private int totalTapePoints;
+    private int activePointCount;
 
     // References
     private ThirdPersonController playerController;
@@ -87,39 +96,55 @@ public class CassetteInteraction : MonoBehaviour
         tapeLine.numCornerVertices = 4;
         tapeLine.numCapVertices = 4;
 
-        RebuildTapeStrip();
+        RebuildTapeStripAll();
     }
 
     /// <summary>
-    /// Reads child objects named "TapePoint_*" under this GameObject as control points,
-    /// plus the fixed endpoints stripPoint1 (start) and stripPoint2 (end).
-    /// Call this after adding/removing/moving control points in the Editor.
+    /// Rebuild with ALL control points (Editor use).
     /// </summary>
     [ContextMenu("Rebuild Tape Strip")]
-    public void RebuildTapeStrip()
+    public void RebuildTapeStripAll()
     {
-        if (tapeLine == null || stripPoint1 == null || stripPoint2 == null) return;
+        var allPoints = GetSortedTapePoints();
+        totalTapePoints = allPoints.Count;
+        activePointCount = totalTapePoints;
+        UpdateTapeLine(allPoints.Count);
+    }
 
-        // Collect child control points sorted by name
-        var controlPoints = new System.Collections.Generic.List<Transform>();
+    /// <summary>
+    /// Reads child objects named "TapePoint_*" sorted by name.
+    /// </summary>
+    private System.Collections.Generic.List<Transform> GetSortedTapePoints()
+    {
+        var points = new System.Collections.Generic.List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {
             var child = transform.GetChild(i);
             if (child.name.StartsWith("TapePoint_") && child != stripPoint1 && child != stripPoint2)
-                controlPoints.Add(child);
+                points.Add(child);
         }
-        controlPoints.Sort((a, b) => string.Compare(a.name, b.name, System.StringComparison.Ordinal));
+        points.Sort((a, b) => string.Compare(a.name, b.name, System.StringComparison.Ordinal));
+        return points;
+    }
 
-        // Build final point list: stripPoint1 → control points → stripPoint2
-        int totalPoints = 2 + controlPoints.Count;
-        tapeLine.positionCount = totalPoints;
+    /// <summary>
+    /// Rebuild LineRenderer with only `count` active control points (winding effect).
+    /// </summary>
+    private void UpdateTapeLine(int activeCount)
+    {
+        if (tapeLine == null || stripPoint1 == null || stripPoint2 == null) return;
+
+        var allPoints = GetSortedTapePoints();
+        int visible = Mathf.Clamp(activeCount, 0, allPoints.Count);
+
+        tapeLine.positionCount = 2 + visible;
         tapeLine.startWidth = stripWidth;
         tapeLine.endWidth = stripWidth;
 
         tapeLine.SetPosition(0, stripPoint1.localPosition);
-        for (int i = 0; i < controlPoints.Count; i++)
-            tapeLine.SetPosition(i + 1, controlPoints[i].localPosition);
-        tapeLine.SetPosition(totalPoints - 1, stripPoint2.localPosition);
+        for (int i = 0; i < visible; i++)
+            tapeLine.SetPosition(i + 1, allPoints[i].localPosition);
+        tapeLine.SetPosition(1 + visible, stripPoint2.localPosition);
     }
 
     private void Update()
@@ -134,6 +159,26 @@ public class CassetteInteraction : MonoBehaviour
         }
 
         HandleMouseDrag();
+
+        // Slider-driven winding
+        if (windingSlider != null)
+        {
+            int targetCount = Mathf.RoundToInt((1f - windingSlider.value) * totalTapePoints);
+            if (targetCount != activePointCount)
+            {
+                activePointCount = targetCount;
+                UpdateTapeLine(activePointCount);
+                if (activePointCount <= 0) onWindingComplete?.Invoke();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called by winding slider's OnValueChanged.
+    /// </summary>
+    public void OnWindingSliderChanged(float value)
+    {
+        // Handled in Update
     }
 
     private void HandleMouseDrag()
@@ -158,16 +203,18 @@ public class CassetteInteraction : MonoBehaviour
             Transform pivot = transform.Find("Center");
             Vector3 pivotPos = pivot != null ? pivot.position : transform.position;
 
-            // Build per-frame rotation from mouse delta
+            // 通过鼠标移动构建每帧的旋转
             Quaternion rotH = Quaternion.AngleAxis(delta.x * rotationSensitivity, cam.transform.up);
             Quaternion rotV = Quaternion.AngleAxis(-delta.y * rotationSensitivity, cam.transform.right);
             Quaternion frameRot = rotH * rotV;
 
-            // Rotate position around pivot, then rotate orientation
+            // 绕中心
             Vector3 toObj = transform.position - pivotPos;
             toObj = frameRot * toObj;
             transform.position = pivotPos + toObj;
             transform.rotation = frameRot * transform.rotation;
+
+            // No winding here — handled by slider in WindingSliderUpdate()
         }
 
         // Exit with ESC
@@ -201,6 +248,10 @@ public class CassetteInteraction : MonoBehaviour
         // Switch to cassette camera — Cinemachine Brain blends automatically
         if (cassetteVCam != null) cassetteVCam.Priority = (int)vcamPriority;
 
+        // Show winding slider
+        if (windingSliderUI != null) windingSliderUI.SetActive(true);
+        if (windingSlider != null) windingSlider.value = 0f;
+
         // Float cassette up
         float elapsed = 0f;
         while (elapsed < floatDuration)
@@ -218,6 +269,7 @@ public class CassetteInteraction : MonoBehaviour
     {
         isInteracting = false;
         isDragging = false;
+        if (windingSliderUI != null) windingSliderUI.SetActive(false);
 
         // Switch back to player camera
         if (cassetteVCam != null) cassetteVCam.Priority = 0;

@@ -1,0 +1,56 @@
+// ============================================================
+// 磁条构建伪代码 (Tape Strip Construction)
+// 源文件: Assets/Scripts/Level/CassetteInteraction.cs
+// ============================================================
+
+// ---- 数据定义 ----
+常量 起点 = stripPoint1（场景中指定，磁带条起始锚点）
+常量 终点 = stripPoint2（场景中指定，磁带条结束锚点）
+常量 带宽 = 0.015  // 磁带条宽度
+常量 颜色 = 棕色   // 磁带条颜色
+
+控制点列表 = []    // 手动在 Scene 视图中拖动的空 GameObject
+
+// ---- 初始化磁条 ----
+函数 创建磁带条()：
+    在游戏对象上添加 LineRenderer 组件
+    设置 LineRenderer.使用世界坐标 = false      // ← 跟随父物体旋转
+    设置 LineRenderer.宽度 = 带宽
+    设置 LineRenderer.颜色 = 颜色
+    设置 LineRenderer.圆角数 = 4                // ← 视觉圆滑
+    调用 重建磁带条()
+
+
+// ---- 通过控制点调整磁条位置 ----
+函数 重建磁带条()：
+    控制点列表.清空()
+
+    // 步骤1: 收集所有 TapePoint_* 子物体
+    遍历 所有子物体：
+        if 子物体名称以 "TapePoint_" 开头：
+            控制点列表.添加(子物体)
+
+    // 步骤2: 按名称排序（保证路径顺序）
+    控制点列表.排序(按名称)
+
+    // 步骤3: 构建完整路径点列表
+    总点数 = 2 + 控制点列表.计数     // 起点 + 控制点 + 终点
+    LineRenderer.顶点数 = 总点数
+
+    LineRenderer[0] = 起点.localPosition
+    for i = 0 to 控制点列表.计数 - 1：
+        LineRenderer[i + 1] = 控制点列表[i].localPosition
+    LineRenderer[总点数 - 1] = 终点.localPosition
+
+    // 结果：一条从起点 → TapePoint_1 → ... → TapePoint_N → 终点的连续折线
+
+
+// ---- 使用方式 ----
+// Editor 中：
+//   1. 在 Cassete_Play 下创建子物体 TapePoint_1, TapePoint_2, ..., TapePoint_N
+//   2. 在 Scene 视图中拖动它们，塑形磁条的杂乱路径
+//   3. 右键 CassetteInteraction 组件 → "Rebuild Tape Strip" 刷新
+
+// 运行时：
+//   磁条路径点使用 localPosition，随 Cassete_Play 物体旋转
+//   当玩家旋转磁带时，磁条同步旋转，保持相对位置不变

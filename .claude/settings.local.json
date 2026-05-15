@@ -23,7 +23,8 @@
       "mcp__UnityMCP__read_console",
       "mcp__UnityMCP__manage_graphics",
       "mcp__UnityMCP__manage_asset",
-      "mcp__UnityMCP__manage_scene"
+      "mcp__UnityMCP__manage_scene",
+      "PowerShell(pip install -r \"C:\\\\Users\\\\ZiShu\\\\.claude\\\\skills\\\\ppt-master\\\\requirements.txt\" 2>&1)"
     ]
   }
 }
